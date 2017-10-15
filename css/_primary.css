@@ -1,0 +1,5 @@
+body .primary-header {
+  background: white; }
+  body .primary-header .wrapper-header > h1 {
+    font-size: 3em;
+    text-transform: lowercase; }
