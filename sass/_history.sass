@@ -1,0 +1,101 @@
+body
+  .history
+    margin: 120px auto
+
+    text-align: center
+
+    h3
+      &.second
+        margin-bottom: 250px
+
+    hr
+      margin: 25px auto 40px
+
+    .second-wrapper
+      width: 940px
+
+      margin: 200px auto 300px !important
+
+      display: flex
+      align-items: center
+
+      margin: 0 auto
+
+      .line
+        height: 2px
+        background: grey
+
+        &.short
+          width: 180px
+
+        &.long
+          width: 260px
+
+      .circle
+        position: relative
+
+        width: 5px
+        height: 5px
+
+        border: 2px solid grey
+          radius: 50%
+
+        margin: 3px
+
+        .number
+          position: absolute
+          left: -10px
+
+          &.up
+            top: -4px
+
+          &.down
+            top: -42px
+
+        .vertical
+          width: 2px
+          background: grey
+
+          position: absolute
+          left: 1px
+
+          &.up
+            bottom: 10px
+            height: 150px
+
+            &.first
+              height: 180px
+
+          &.down
+            top: 10px
+            height: 80px
+
+          .left
+            position: absolute
+            right: 0
+
+            width: 140px
+
+            &.up
+              top: 0
+
+            &.down
+              bottom: 0
+
+            .percentage
+              position: absolute
+              top: -25px
+
+              color: darkorange
+              font-weight: 700
+              letter-spacing: .5px
+
+              &.decimal
+                left: -50px
+
+              &.no-decimal
+                left: -40px
+
+            .text
+              width: 120px
+              text-align: left

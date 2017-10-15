@@ -1,0 +1,296 @@
+@font-face
+  // primary: Nunito, secondary: Open Sans
+  font-family: OpenSans
+  src: url('Open_Sans/OpenSans-Regular.ttf') format('truetype')
+
+@font-face
+  font-family: OpenSansBold
+  src: url('Open_Sans/OpenSans-ExtraBold.ttf') format('truetype')
+
+@font-face
+  font-family: RobotoSlab
+  src: url('Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype')
+
+$primary: rgb(255, 98, 0)
+$light: #e1e1e1
+$dark: #707070
+
+.wrapper
+  width: 1060px
+  padding: 0 40px
+  margin: 0 auto
+
+.more
+  padding-bottom: 1px
+
+  text-transform: uppercase
+  font-size: .8em
+  font-weight: 700
+  letter-spacing: 1.2px
+
+  border-bottom: 1.5px solid black
+
+  transition: all .3s ease-in-out
+
+  &:hover
+    padding-bottom: 5px
+
+h1
+  font-family: RobotoSlab
+  font-weight: 700
+
+h3
+  font-weight: 400
+  font-size: 2em
+
+  bold
+    font-weight: 700
+
+a
+  text-decoration: none
+  color: black
+
+*
+  z-index: 1
+
+html, body
+  font-family: OpenSans
+  margin: 0
+  padding: 0
+
+  header
+    background: transparent
+
+    height: 45vh
+    // height: 76vh
+    width: 100%
+
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    color: white
+
+    background: url('images/primary.jpg')
+      size: cover
+      position: center -120px
+      attachment: fixed
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+
+      background: rgba(0,0,0,.5)
+
+      width: 100%
+      height: 45vh
+
+      content: ' '
+
+    .primary
+      position: fixed
+      top: 0px
+
+      width: 100%
+
+      color: black
+      font-size: 1.1em
+
+      padding: 0
+      margin: 0
+
+      background: white
+      box-shadow: 0px 5px 20px rgba(0,0,0,.15)
+
+      transition: all .25s ease-in-out
+
+      z-index: 1000
+
+      .wrapper
+        max-width: 1060px
+
+        margin: 0 auto
+
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+
+        .logo
+          background: url('images/logo.jpg')
+            size: cover
+            position: center
+
+          height: 72px
+          width: 75px
+
+        .primary-list
+          list-style: none
+          display: flex
+          justify-content: space-between
+          align-items: baseline
+
+          margin: 0
+
+          > li
+            position: relative
+
+            margin-left: 40px
+            padding: 10px 0
+
+            height: 70px
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            font-weight: 400
+            color: black
+
+            cursor: pointer
+            transition: all .2s ease-in-out
+
+            // except for border-bottom
+
+            &.menu-normal
+              letter-spacing: normal
+
+              &:hover
+                font-weight: 700
+                color: rgb(255, 98, 0)
+                letter-spacing: -.1px
+
+                & > a
+                  font-weight: 700
+                  color: rgb(255, 98, 0)
+                  letter-spacing: -.1px
+
+              &.clicked
+                font-weight: 700
+                color: rgb(255, 98, 0)
+                letter-spacing: -.1px
+
+                & > a
+                  font-weight: 700
+                  color: rgb(255, 98, 0)
+                  letter-spacing: -.1px
+
+              .underline
+                position: absolute
+                bottom: 0px
+                left: 0px
+
+                width: 100%
+                height: 2.5px
+
+                background: transparent
+
+                transition: all .42s ease-in-out
+
+                &.clicked
+                  background: rgb(255, 98, 0)
+
+
+            &.menu-login
+              border: none
+                radius: 3px
+
+              padding: 5px 17px
+
+              height: 20px
+
+              font-size: .92em
+              background: rgb(96, 166, 218)
+
+              > a
+                color: white
+
+              &:hover
+                background: rgb(90, 184, 233)
+
+    .secondary
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 999
+
+      .secondary-list
+        position: absolute
+        top: 2px
+        left: 0
+
+        margin: 0
+        padding: 10px 0 !important
+
+        width: 100vw
+
+        background: white
+
+        box-shadow: 0px 5px 20px rgba(0,0,0,.1)
+
+        list-style: none
+
+        font-size: 1.1em
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        transition: all .42s ease-in-out
+
+        z-index: 3
+
+        & > li
+          margin: 5px 40px 5px 0
+          padding-left: 40px
+
+          border-left: 1px solid lighten(lightgrey, 10%)
+
+          cursor: pointer
+
+          z-index: 1000
+
+          &:nth-child(1)
+            border: none
+
+          & > a
+            color: darken(darkgrey, 30%)
+            transition: all .3s ease-in-out
+
+          &:hover > a
+            color: darken(darkgrey, 40%)
+
+        &.clicked
+          top: 73px
+          z-index: 4
+
+    .wrapper-header
+      max-width: 1060px
+      text-align: center
+
+      >h1
+        margin-top: 70px
+
+        font-size: 4.4em
+        // 2.6em
+        letter-spacing: 1.9px
+        text-shadow: 5px 5px 5px rgba(0,0,0,.3)
+
+      >h3
+        font-size: 1.8em
+        text-align: center
+        color: transparentize(white, .15)
+        letter-spacing: .5px
+        text-shadow: 5px 5px 5px rgba(0,0,0,.3)
+
+  footer
+    background: $light
+
+    font-size: .8em
+
+    .wrapper
+      display: flex
+      align-items: center
+      justify-content: space-between
