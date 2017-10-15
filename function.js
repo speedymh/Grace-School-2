@@ -30,6 +30,9 @@ $(document).ready(function(){
     $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
   });
 
+  // var menuWidth = $('.primary').css(width);
+  // $('.secondary').css('width', 'menuWidth');
+
   // smoothScroll(1000);
 });
 

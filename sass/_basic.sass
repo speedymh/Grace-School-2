@@ -15,6 +15,40 @@ $primary: rgb(255, 98, 0)
 $light: #e1e1e1
 $dark: #707070
 
+*
+  z-index: 1
+
+html, body
+  font-family: OpenSans
+  margin: 0
+  padding: 0
+  width: 100vw
+  overflow-x: hidden
+
+h1
+  font-family: RobotoSlab
+  font-weight: 700
+
+h2
+
+
+h3
+  font-weight: 400
+  font-size: 2em
+
+  bold
+    font-weight: 700
+
+h4
+  margin: 0
+  font-size: 1.5em
+  letter-spacing: .3px
+  font-weight: 800
+
+a
+  text-decoration: none
+  color: black
+
 .wrapper
   width: 1060px
   padding: 0 40px
@@ -35,256 +69,440 @@ $dark: #707070
   &:hover
     padding-bottom: 5px
 
-h1
-  font-family: RobotoSlab
-  font-weight: 700
+.more-big
+  padding: 15px 30px
+  background: $primary
+  color: white
 
-h2
-  
+  font-size: 1.1em
 
-h3
-  font-weight: 400
-  font-size: 2em
+  transition: all .3s ease-in-out
 
-  bold
-    font-weight: 700
+  &:hover
+    background: black
 
-a
-  text-decoration: none
-  color: black
+.headline-row-text-cta
+  display: flex
+  align-items: baseline
+  justify-content: center
 
-*
-  z-index: 1
+  text-align: left
 
-html, body
-  font-family: OpenSans
-  margin: 0
-  padding: 0
+  margin: 100px auto
 
-  header
-    height: 45vh
-    // height: 76vh
-    width: 100%
+  &.contact
+    align-items: flex-start
 
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
+  &.school-buttons
+    padding-top: 50px
+    margin: 50px auto
+    border-top: 1px solid $light
 
-    color: white
+  .section-title
+    width: 30%
 
-    background: url('images/primary.jpg')
-      size: cover
-      position: center -120px
-      attachment: fixed
+    > h4
+      color: $primary
 
-    &::before
-      position: absolute
-      top: 0
-      left: 0
+      &.contact
+        color: $dark
 
-      background: rgba(0,0,0,.5)
+  .section-content
+    width: 70%
 
-      width: 100%
-      height: 45vh
+    &.contact
+      display: flex
+      align-items: center
+      justify-content: space-between
 
-      content: ' '
+      &.school-cta
+        justify-content: flex-start
 
-    .primary
-      position: fixed
-      top: 0px
+        > a
+          margin-right: 175px
 
-      width: 100%
-
-      color: black
-      font-size: 1.1em
-
-      padding: 0
+    > h3
       margin: 0
 
-      background: white
-      box-shadow: 0px 5px 20px rgba(0,0,0,.15)
+      &.mission-text
+        color: $dark
 
-      transition: all .25s ease-in-out
+        margin-bottom: 70px
 
-      z-index: 1000
+    .author
+      display: flex
+      align-items: center
 
-      .wrapper
-        max-width: 1060px
+      margin-top: -12px
 
-        margin: 0 auto
+      > h5
+        color: $dark
+        text-transform: uppercase
 
-        display: flex
-        align-items: center
-        justify-content: space-between
+      .horizontal
+        display: table
 
+        width: 90px
+        height: 1.2px
 
-        .logo
-          background: url('images/logo.jpg')
-            size: cover
-            position: center
+        background: $light
 
-          height: 72px
-          width: 75px
+        margin-right: 20px
 
-        .primary-list
-          list-style: none
-          display: flex
-          justify-content: space-between
-          align-items: baseline
+    .academics-list
+      margin: 40px 0 35px
+      padding: 0
 
-          margin: 0
+      list-style: none
 
-          > li
-            position: relative
-
-            margin-left: 40px
-            padding: 10px 0
-
-            height: 70px
-
-            display: flex
-            align-items: center
-            justify-content: center
-
-            font-weight: 400
-            color: black
-
-            cursor: pointer
-            transition: all .2s ease-in-out
-
-            // except for border-bottom
-
-            &.menu-normal
-              letter-spacing: normal
-
-              &:hover
-                font-weight: 700
-                color: rgb(255, 98, 0)
-                letter-spacing: -.1px
-
-                & > a
-                  font-weight: 700
-                  color: rgb(255, 98, 0)
-                  letter-spacing: -.1px
-
-              &.clicked
-                font-weight: 700
-                color: rgb(255, 98, 0)
-                letter-spacing: -.1px
-
-                & > a
-                  font-weight: 700
-                  color: rgb(255, 98, 0)
-                  letter-spacing: -.1px
-
-              .underline
-                position: absolute
-                bottom: 0px
-                left: 0px
-
-                width: 100%
-                height: 2.5px
-
-                background: transparent
-
-                transition: all .42s ease-in-out
-
-                &.clicked
-                  background: rgb(255, 98, 0)
-
-
-            &.menu-login
-              border: none
-                radius: 3px
-
-              padding: 5px 17px
-
-              height: 20px
-
-              font-size: .92em
-              background: rgb(96, 166, 218)
-
-              > a
-                color: white
-
-              &:hover
-                background: rgb(90, 184, 233)
-
-    .secondary
-      position: fixed
-      top: 0
-      left: 0
-      z-index: 999
-
-      .secondary-list
-        position: absolute
-        top: 2px
-        left: 0
-
+      > li
         margin: 0
-        padding: 10px 0 !important
+        padding: 0
 
-        width: 100vw
+        font-size: 1.2em
+        color: lighten(black, 20%)
+        line-height: 1.6em
 
-        background: white
+        .chevron-right
+          transform: rotateZ(-90deg)
+          width: 10px
+          height: 10px
 
-        box-shadow: 0px 5px 20px rgba(0,0,0,.1)
+.header-title
+  margin-top: 131px
+  border-right: 25px solid $primary
 
-        list-style: none
+  &.wrapper
+    width: 1020px
 
-        font-size: 1.1em
+  >h2
+    font-size: 3.6em
+    margin: 0
+    margin-bottom: 10px
+    margin-left: -10px
+
+  >h5
+    margin: .1em
+    padding-left: 1.2em
+    margin-left: -10px
+    font-size: 1.1em
+
+    color: $dark
+
+.motto
+  margin: 120px 70px
+
+  text-align: center
+
+  >h2
+    color: $dark
+
+  >h3
+    margin-top: 15px
+    font-size: 3.2em
+    margin-bottom: 50px
+
+  >.more
+    color: $primary
+    border-bottom: 1px solid $primary
+
+.numbers
+  border-top: 1px solid $light
+  padding: 30px 0
+  margin: 60px 0
+
+  text-align: center
+
+  background: $light
+
+  >.wrapper
+
+    >h3
+      margin-top: 60px
+      font-size: 2.5em
+
+    >h5
+      color: $dark
+      text-transform: uppercase
+      margin-top: -30px
+      margin-bottom: 50px
+      letter-spacing: .3px
+
+    >.column
+      border-top: 2px solid $light
+      border-left: 2px solid $light
+
+      width: 100%
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      background: white
+
+      &.two
+        border-top: none
+
+      >.box
+        border-right: 2px solid $light
+        border-bottom: 2px solid $light
+
+        width: 100%
+        height: 300px
 
         display: flex
         align-items: center
         justify-content: center
+        flex-direction: column
 
-        transition: all .42s ease-in-out
+        >h6
+          color: $dark
+          font-size: 1.1em
+          margin-bottom: 15px
 
-        z-index: 3
+        >h3
+          color: $primary
+          font-size: 4em
 
-        & > li
-          margin: 5px 40px 5px 0
-          padding-left: 40px
+          margin: 0
 
-          border-left: 1px solid lighten(lightgrey, 10%)
+    .information
+      margin-top: 40px
+      margin-bottom: 60px
+
+      display: flex
+
+      >.section-title
+        width: 30%
+        text-align: left
+
+      >.section-content
+        width: 70%
+        text-align: right
+
+        >.pop-up
+          margin-left: 40px
+
+.hero-image
+  position: static
+
+  margin-top: 70px
+
+  height: 120vh
+  width: 100%
+
+  &.primary-foto
+    background: url('../images/primary.jpg')
+      size: cover
+      position: center
+
+body
+
+  .primary
+    position: absolute
+    top: 0px
+
+    width: 100%
+
+    color: black
+    font-size: 1.1em
+
+    padding: 0
+    margin: 0
+
+    background: white
+
+    transition: all .25s ease-in-out
+
+    z-index: 1000
+
+    .wrapper
+      max-width: 1060px
+
+      margin: 0 auto
+
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      border-bottom: 1px solid $light
+
+
+      .logo
+        background: url('images/logo.jpg')
+          size: cover
+          position: center
+
+        height: 72px
+        width: 75px
+
+      .primary-list
+        list-style: none
+        display: flex
+        justify-content: space-between
+        align-items: baseline
+
+        margin: 0
+
+        > li
+          position: relative
+
+          margin-left: 40px
+          padding: 10px 0
+
+          height: 70px
+
+          display: flex
+          align-items: center
+          justify-content: center
+
+          font-weight: 400
+          color: black
 
           cursor: pointer
+          transition: all .2s ease-in-out
 
-          z-index: 1000
+          // except for border-bottom
 
-          &:nth-child(1)
+          &.menu-normal
+            letter-spacing: normal
+
+            &:hover
+              font-weight: 700
+              color: rgb(255, 98, 0)
+              letter-spacing: -.1px
+
+              & > a
+                font-weight: 700
+                color: rgb(255, 98, 0)
+                letter-spacing: -.1px
+
+            &.clicked
+              font-weight: 700
+              color: rgb(255, 98, 0)
+              letter-spacing: -.1px
+
+              & > a
+                font-weight: 700
+                color: rgb(255, 98, 0)
+                letter-spacing: -.1px
+
+            .underline
+              position: absolute
+              bottom: -1px
+              left: 0px
+
+              width: 100%
+              height: 2.5px
+
+              background: transparent
+
+              transition: all .42s ease-in-out
+
+              &.clicked
+                background: rgb(255, 98, 0)
+
+
+          &.menu-login
             border: none
+              radius: 3px
 
-          & > a
-            color: darken(darkgrey, 30%)
-            transition: all .3s ease-in-out
+            padding: 5px 17px
 
-          &:hover > a
-            color: darken(darkgrey, 40%)
+            height: 20px
 
-        &.clicked
-          top: 73px
-          z-index: 4
+            font-size: .92em
+            background: rgb(96, 166, 218)
 
-    .wrapper-header
-      max-width: 1060px
-      text-align: center
+            > a
+              color: white
 
-      >h1
-        margin-top: 70px
+            &:hover
+              background: rgb(90, 184, 233)
 
-        font-size: 4.4em
-        // 2.6em
-        letter-spacing: 1.9px
-        text-shadow: 5px 5px 5px rgba(0,0,0,.3)
+  .secondary
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 999
 
-      >h3
-        font-size: 1.8em
-        text-align: center
-        color: transparentize(white, .15)
-        letter-spacing: .5px
-        text-shadow: 5px 5px 5px rgba(0,0,0,.3)
+    .secondary-list
+      position: absolute
+      top: 2px
+      left: 0
+
+      margin: 0
+      padding: 10px 0 !important
+
+      width: 100vw
+
+      background: white
+
+      border-bottom: 2px solid $light
+
+      list-style: none
+
+      font-size: 1.1em
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      transition: all .42s ease-in-out
+
+      z-index: 3
+
+      & > li
+        margin: 5px 40px 5px 0
+        padding-left: 40px
+
+        border-left: 1px solid lighten(lightgrey, 10%)
+
+        cursor: pointer
+
+        z-index: 1000
+
+        &:nth-child(1)
+          border: none
+
+        & > a
+          color: darken(darkgrey, 30%)
+          transition: all .3s ease-in-out
+
+        &:hover > a
+          color: darken(darkgrey, 40%)
+
+      &.clicked
+        top: 73px
+        z-index: 4
+
+  .headline-centered
+    background: #111111
+    color: white
+
+    padding: 60px 0
+
+    text-align: center
+
+    .wrapper
+      > h4
+        font-size: 2em
+
+      > h3
+        font-size: 1.5em
+        color: #acacac
+
+      &.small
+        width: 860px
+
+    &.saturday
+      background: white
+      color: black
+
+      >.wrapper
+        >h3
+          color: $dark
+          text-align: justify
 
   footer
     background: $light
