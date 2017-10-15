@@ -54,6 +54,9 @@ a
   padding: 0 40px
   margin: 0 auto
 
+  &.small
+    max-width: 860px
+
 .more
   padding-bottom: 1px
 
@@ -190,7 +193,7 @@ a
     color: $dark
 
 .motto
-  margin: 120px 70px
+  margin: 120px auto
 
   text-align: center
 
@@ -201,6 +204,15 @@ a
     margin-top: 15px
     font-size: 3.2em
     margin-bottom: 50px
+
+  >h4
+    font-size: 1.3em
+    text-align: justify
+    font-weight: 400
+
+    margin-bottom: 40px
+
+    line-height: 1.8em
 
   >.more
     color: $primary
@@ -492,9 +504,6 @@ body
         font-size: 1.5em
         color: #acacac
 
-      &.small
-        width: 860px
-
     &.saturday
       background: white
       color: black
@@ -503,6 +512,7 @@ body
         >h3
           color: $dark
           text-align: justify
+          line-height: 1.8em
 
   footer
     background: $light
