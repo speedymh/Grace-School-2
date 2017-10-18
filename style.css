@@ -95,6 +95,9 @@ a {
     padding-top: 50px;
     margin: 50px auto;
     border-top: 1px solid #e1e1e1; }
+    .headline-row-text-cta.school-buttons.information {
+      margin-top: 50px;
+      color: #707070; }
   .headline-row-text-cta .section-title {
     width: 30%; }
     .headline-row-text-cta .section-title > h4 {
@@ -202,12 +205,12 @@ a {
 
 .numbers {
   border-top: 1px solid #e1e1e1;
-  padding: 30px 0;
+  padding: 90px 0 115px;
   margin: 60px 0;
   text-align: center;
   background: #e1e1e1; }
   .numbers > .wrapper > h3 {
-    margin-top: 60px;
+    margin-top: 0px;
     font-size: 2.5em; }
   .numbers > .wrapper > h5 {
     color: #707070;
@@ -232,7 +235,7 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
     background: white; }
-    .numbers > .wrapper > .column.two {
+    .numbers > .wrapper > .column.two, .numbers > .wrapper > .column.three {
       border-top: none; }
     .numbers > .wrapper > .column > .box {
       border-right: 2px solid #e1e1e1;
@@ -256,6 +259,22 @@ a {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; }
+      .numbers > .wrapper > .column > .box.cta {
+        position: relative;
+        height: auto;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+        .numbers > .wrapper > .column > .box.cta > .more {
+          position: absolute;
+          margin: 25px 0;
+          color: #707070;
+          border-bottom: 1px solid #707070; }
       .numbers > .wrapper > .column > .box > h6 {
         color: #707070;
         font-size: 1.1em;
@@ -264,21 +283,6 @@ a {
         color: #ff6200;
         font-size: 4em;
         margin: 0; }
-  .numbers > .wrapper .information {
-    margin-top: 40px;
-    margin-bottom: 60px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-    .numbers > .wrapper .information > .section-title {
-      width: 30%;
-      text-align: left; }
-    .numbers > .wrapper .information > .section-content {
-      width: 70%;
-      text-align: right; }
-      .numbers > .wrapper .information > .section-content > .pop-up {
-        margin-left: 40px; }
 
 .hero-image {
   position: static;
@@ -287,6 +291,10 @@ a {
   width: 100%; }
   .hero-image.primary-foto {
     background: url("../images/primary.jpg");
+      background-size: cover;
+      background-position: center; }
+  .hero-image.team {
+    background: url("../images/laboratory.jpg");
       background-size: cover;
       background-position: center; }
 
@@ -473,6 +481,18 @@ body .headline-centered {
       color: #707070;
       text-align: justify;
       line-height: 1.8em; }
+    body .headline-centered.saturday > .wrapper .information {
+      margin-top: 110px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      body .headline-centered.saturday > .wrapper .information > .section-title {
+        width: 30%;
+        text-align: left; }
+      body .headline-centered.saturday > .wrapper .information > .section-content {
+        width: 70%;
+        text-align: right; }
 
 body footer {
   background: #e1e1e1;
@@ -490,6 +510,20 @@ body footer {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+
+.pop-up {
+  display: inline;
+  cursor: pointer;
+  margin-left: 40px;
+  color: #707070;
+  background: #e1e1e1;
+  padding: 5px 20px;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out; }
+  .pop-up:hover {
+    color: #e1e1e1;
+    background: #707070; }
 
 body .primary.index {
   position: fixed;
@@ -637,7 +671,7 @@ body .schools .school {
       -ms-flex-order: 1;
       order: 1; }
     body .schools .school .image.primary-school {
-      background: url("../images/primary.jpg");
+      background: url("../images/secondary school.jpg");
         background-size: cover;
         background-position: center;
       -webkit-box-ordinal-group: 3;
@@ -645,7 +679,7 @@ body .schools .school {
       -ms-flex-order: 2;
       order: 2; }
     body .schools .school .image.secondary-school {
-      background: url("../images/secondary school.jpg");
+      background: url("../images/table-centered.jpg");
         background-size: cover;
         background-position: center;
       -webkit-box-ordinal-group: 2;
@@ -671,8 +705,8 @@ body .schools .school {
     -ms-flex-order: 1;
     order: 1;
     padding: 0px 30px 0px 0px;
-    background: #79978f;
-    color: white;
+    background: white;
+    color: black;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -680,10 +714,10 @@ body .schools .school {
     body .schools .school.primary-school .description .school-wrapper > h2 {
       border-bottom: 2px solid #e1e1e1; }
     body .schools .school.primary-school .description .school-wrapper > h3 {
-      color: white; }
+      color: #707070; }
     body .schools .school.primary-school .description .school-wrapper .more {
-      color: white;
-      border-bottom: 1.5px solid white; }
+      color: black;
+      border-bottom: 1.5px solid black; }
   body .schools .school.secondary-school .description {
     position: relative;
     -webkit-box-ordinal-group: 3;
@@ -691,8 +725,8 @@ body .schools .school {
     -ms-flex-order: 2;
     order: 2;
     padding: 0px 0px 0px 30px;
-    background: white;
-    color: black; }
+    background: #708330;
+    color: white; }
     body .schools .school.secondary-school .description .border-bottom {
       position: absolute;
       bottom: 0px;
@@ -703,44 +737,114 @@ body .schools .school {
     body .schools .school.secondary-school .description .school-wrapper > h2 {
       border-bottom: 2px solid #e1e1e1; }
     body .schools .school.secondary-school .description .school-wrapper > h3 {
-      color: #707070; }
+      color: white; }
     body .schools .school.secondary-school .description .school-wrapper .more {
-      color: black;
-      border-bottom: 1.5px solid black; }
+      color: white;
+      border-bottom: 1.5px solid white; }
 
-body .team {
-  text-align: center;
-  background: #ededed; }
-  body .team > .team-wrapper {
-    width: 1060px;
-    padding: 0 40px;
-    margin: 0 auto;
+.motto.wrapper.small.team > h3 {
+  margin-top: 90px;
+  color: black;
+  margin-bottom: 0; }
+
+.motto.wrapper.small.team > h5 {
+  color: #707070;
+  text-transform: uppercase;
+  font-size: .9em;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  letter-spacing: .45px; }
+
+.team-section {
+  background: #f5f7f8;
+  padding: 60px 0; }
+  .team-section .wrapper .team-headline {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    body .team > .team-wrapper > h2 {
-      margin-top: 120px; }
-    body .team > .team-wrapper h3 {
-      margin-bottom: 50px; }
-    body .team > .team-wrapper .row {
-      height: 300px;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 60px; }
+    .team-section .wrapper .team-headline .title-wrapper > h3 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 2.2em; }
+    .team-section .wrapper .team-headline .title-wrapper > h5 {
+      margin-top: 5px;
+      margin-left: 5px;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      color: #707070;
+      letter-spacing: .45px; }
+  .team-section .wrapper .profile-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .team-section .wrapper .profile-wrapper .profile {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       width: 100%;
-      background: white;
-      margin-bottom: 10px;
+      margin: 30px; }
+      .team-section .wrapper .profile-wrapper .profile .image {
+        height: 300px;
+        width: 100%;
+        margin-bottom: 30px; }
+      .team-section .wrapper .profile-wrapper .profile > h4 {
+        font-weight: 400; }
+      .team-section .wrapper .profile-wrapper .profile > h5 {
+        margin-top: 5px;
+        color: #acacac;
+        text-transform: uppercase;
+        letter-spacing: .45px; }
+      .team-section .wrapper .profile-wrapper .profile.nursery-one > .image {
+        background: url("../images/mtiro-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      .team-section .wrapper .profile-wrapper .profile.nursery-two > .image {
+        background: url("../images/regina-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      .team-section .wrapper .profile-wrapper .profile.nursery-three > .image {
+        background: url("../images/olaph-small.jpg");
+          background-size: cover;
+          background-position: center; }
+  .team-section .wrapper .team-list {
+    list-style: none;
+    padding: 0px;
+    padding-bottom: 25px; }
+    .team-section .wrapper .team-list > li {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -749,43 +853,47 @@ body .team {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-      body .team > .team-wrapper .row.one {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px; }
-      body .team > .team-wrapper .row.three {
-        margin-bottom: 120px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px; }
-      body .team > .team-wrapper .row .column {
-        padding: 0 50px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        width: 100%; }
-        body .team > .team-wrapper .row .column.right {
-          border-left: 1px solid #ededed; }
-        body .team > .team-wrapper .row .column .img {
-          width: 140px;
-          height: 140px;
-          border-radius: 50%;
-          background: url("images/klumberjack.jpg");
-            background-size: cover;
-            background-position: center; }
-        body .team > .team-wrapper .row .column ul {
-          list-style: none; }
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 0px 30px; }
+      .team-section .wrapper .team-list > li:nth-child(2n) {
+        background: #e1e1e1; }
+  .team-section .wrapper > .more {
+    color: #ff6200;
+    border-bottom: 1px solid #ff6200; }
+  .team-section .wrapper > hr {
+    background: #e1e1e1;
+    height: 1px;
+    width: 100%;
+    border: none;
+    margin: 80px 0px 60px; }
+
+.get-in-touch {
+  padding: 90px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .get-in-touch > h3 {
+    margin: 0px; }
+  .get-in-touch > .more-big {
+    margin-top: 30px; }
 
 body .history {
   margin: 120px auto;
@@ -861,6 +969,196 @@ body .history {
           body .history .second-wrapper .circle .vertical .left .text {
             width: 120px;
             text-align: left; }
+
+.card {
+  background: white;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: calc(60vw - 60px);
+  max-height: calc(90vh - 60px);
+  z-index: 999;
+  border-radius: 1px;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
+  padding: 30px 30px 60px;
+  -webkit-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  transform: translateY(-40px);
+  opacity: 0;
+  -webkit-transition: 0.35s cubic-bezier(0.22, -0.12, 0.63, 2.41);
+  -o-transition: 0.35s cubic-bezier(0.22, -0.12, 0.63, 2.41);
+  transition: 0.35s cubic-bezier(0.22, -0.12, 0.63, 2.41);
+  pointer-events: none;
+  overflow-y: scroll; }
+  .card .cross {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out; }
+    .card .cross > span {
+      position: absolute;
+      top: 20px;
+      width: 40px;
+      height: 2.5px;
+      border-radius: 1px;
+      background: #e1e1e1;
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out; }
+      .card .cross > span:nth-child(1) {
+        -webkit-transform: rotateZ(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotateZ(45deg); }
+      .card .cross > span:nth-child(2) {
+        -webkit-transform: rotateZ(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotateZ(-45deg); }
+    .card .cross:hover > span {
+      background: #707070; }
+    .card .cross:hover {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+  .card.open {
+    pointer-events: auto;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; }
+  .card > .image {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+    background: #e1e1e1; }
+    .card > .image.secondary-card-img {
+      background: url("../images/secondary-team.jpg");
+        background-position: center;
+        background-size: cover; }
+  .card > h3 {
+    position: relative;
+    color: black; }
+    .card > h3::after {
+      position: absolute;
+      left: 0px;
+      bottom: -2px;
+      background: #e1e1e1;
+      width: 100%;
+      height: 2px;
+      content: ''; }
+  .card > ol {
+    margin-bottom: 40px; }
+    .card > ol > li {
+      line-height: 1.7em; }
+  .card > .more {
+    color: #ff6200;
+    border-bottom-color: #ff6200; }
+  .card .fee-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .card .fee-wrapper > .column {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      z-index: 500; }
+      .card .fee-wrapper > .column.one {
+        margin-top: 60px; }
+      .card .fee-wrapper > .column.two {
+        margin-bottom: 90px; }
+      .card .fee-wrapper > .column > .quater {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        z-index: 500; }
+        .card .fee-wrapper > .column > .quater.one {
+          border-top-left-radius: 100%;
+          border-top: 1px solid #e1e1e1;
+          background: #e1e1e1; }
+          .card .fee-wrapper > .column > .quater.one > h5 {
+            bottom: 40px;
+            right: 40px; }
+        .card .fee-wrapper > .column > .quater.two {
+          border-top-right-radius: 100%;
+          border-top: 1px solid #e1e1e1; }
+          .card .fee-wrapper > .column > .quater.two > h5 {
+            bottom: 40px;
+            left: 40px; }
+        .card .fee-wrapper > .column > .quater.three {
+          border-bottom-left-radius: 100%;
+          border-bottom: 1px solid #e1e1e1; }
+          .card .fee-wrapper > .column > .quater.three > h5 {
+            top: 40px;
+            right: 40px; }
+        .card .fee-wrapper > .column > .quater.four {
+          border-bottom-right-radius: 100%;
+          border-bottom: 1px solid #e1e1e1;
+          background: #e1e1e1; }
+          .card .fee-wrapper > .column > .quater.four > h5 {
+            top: 40px;
+            left: 40px; }
+        .card .fee-wrapper > .column > .quater > h5 {
+          position: absolute;
+          font-size: 1.1em; }
+        .card .fee-wrapper > .column > .quater .circle {
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: white;
+          border: 2px solid #ff6200;
+            border-radius: 100%;
+          z-index: 1000; }
+          .card .fee-wrapper > .column > .quater .circle.one {
+            bottom: -5px;
+            left: -5px; }
+          .card .fee-wrapper > .column > .quater .circle.two {
+            top: -5px;
+            left: -5px; }
+            .card .fee-wrapper > .column > .quater .circle.two > p {
+              position: absolute;
+              top: 15px;
+              left: -40px;
+              right: 0px;
+              margin: 0 auto;
+              width: 100px;
+              text-align: center; }
+          .card .fee-wrapper > .column > .quater .circle.three {
+            bottom: -5px;
+            right: -5px; }
+            .card .fee-wrapper > .column > .quater .circle.three > p {
+              position: absolute;
+              top: 15px;
+              left: -40px;
+              right: 0px;
+              margin: 0 auto;
+              width: 100px;
+              text-align: center; }
+          .card .fee-wrapper > .column > .quater .circle.four {
+            top: -5px;
+            right: -5px; }
 
 body .secondary-header {
   background: url("images/secondary school.jpg");

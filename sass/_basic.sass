@@ -12,7 +12,9 @@
   src: url('Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype')
 
 $primary: rgb(255, 98, 0)
+$super-light: #f5f7f8
 $light: #e1e1e1
+$medium: #acacac
 $dark: #707070
 
 *
@@ -100,6 +102,10 @@ a
     padding-top: 50px
     margin: 50px auto
     border-top: 1px solid $light
+
+    &.information
+      margin-top: 50px
+      color: $dark
 
   .section-title
     width: 30%
@@ -220,7 +226,7 @@ a
 
 .numbers
   border-top: 1px solid $light
-  padding: 30px 0
+  padding: 90px 0 115px
   margin: 60px 0
 
   text-align: center
@@ -230,7 +236,7 @@ a
   >.wrapper
 
     >h3
-      margin-top: 60px
+      margin-top: 0px
       font-size: 2.5em
 
     >h5
@@ -252,7 +258,7 @@ a
 
       background: white
 
-      &.two
+      &.two, &.three
         border-top: none
 
       >.box
@@ -267,6 +273,20 @@ a
         justify-content: center
         flex-direction: column
 
+        &.cta
+          position: relative
+          height: auto
+
+          justify-content: flex-start
+          align-items: flex-start
+
+          >.more
+            position: absolute
+            margin: 25px 0
+            color: $dark
+
+            border-bottom: 1px solid $dark
+
         >h6
           color: $dark
           font-size: 1.1em
@@ -278,23 +298,6 @@ a
 
           margin: 0
 
-    .information
-      margin-top: 40px
-      margin-bottom: 60px
-
-      display: flex
-
-      >.section-title
-        width: 30%
-        text-align: left
-
-      >.section-content
-        width: 70%
-        text-align: right
-
-        >.pop-up
-          margin-left: 40px
-
 .hero-image
   position: static
 
@@ -303,8 +306,17 @@ a
   height: 120vh
   width: 100%
 
+  // transform: translateY(40px)
+
+  // transition: all 1s ease-in-out
+
   &.primary-foto
     background: url('../images/primary.jpg')
+      size: cover
+      position: center
+
+  &.team
+    background: url('../images/laboratory.jpg')
       size: cover
       position: center
 
@@ -514,6 +526,19 @@ body
           text-align: justify
           line-height: 1.8em
 
+        .information
+          margin-top: 110px
+
+          display: flex
+
+          >.section-title
+            width: 30%
+            text-align: left
+
+          >.section-content
+            width: 70%
+            text-align: right
+
   footer
     background: $light
 
@@ -523,3 +548,20 @@ body
       display: flex
       align-items: center
       justify-content: space-between
+
+
+.pop-up
+  display: inline
+
+  cursor: pointer
+
+  margin-left: 40px
+  color: $dark
+  background: $light
+  padding: 5px 20px
+
+  transition: all .1s ease-in-out
+
+  &:hover
+    color: $light
+    background: $dark

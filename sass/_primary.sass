@@ -1,1 +1,222 @@
+.card
+  background: white
+  position: fixed
+  top: 0px
+  bottom: 0px
+  left: 0px
+  right: 0px
 
+  margin: auto
+
+  width:  calc(60vw - 60px)
+  max-height: calc(90vh - 60px)
+
+  z-index: 999
+
+  border-radius: 1px
+
+  // overflow-y: scroll
+
+  box-shadow: 2px 2px 30px rgba(0,0,0,.15)
+
+  padding: 30px 30px 60px
+
+  transform: translateY(-40px)
+  opacity: 0
+
+  transition: .35s cubic-bezier(0.22,-0.12, 0.63, 2.41)
+
+  pointer-events: none
+  //
+  // .card-wrapper
+  //   position: relative
+
+  overflow-y: scroll
+
+  .cross
+    position: fixed
+    top: 20px
+    right: 20px
+
+    width: 40px
+    height: 40px
+
+    cursor: pointer
+
+    transition: .4s ease-in-out
+
+    >span
+      position: absolute
+      top: 20px
+
+      width: 40px
+      height: 2.5px
+
+      border-radius: 1px
+
+      background: $light
+
+      transition: all .1s ease-in-out
+
+      &:nth-child(1)
+        transform: rotateZ(45deg)
+
+      &:nth-child(2)
+        transform: rotateZ(-45deg)
+
+    &:hover >span
+      background: $dark
+
+    &:hover
+      transform: rotate(90deg)
+
+  &.open
+    pointer-events: auto
+    transform: translateY(0px)
+    opacity: 1
+
+  >.image
+    width: 100%
+    height: 500px
+    margin-bottom: 40px
+
+    background: $light
+
+    &.secondary-card-img
+      background: url('../images/secondary-team.jpg')
+        position: center
+        size: cover
+
+  >h3
+    position: relative
+    color: black
+
+    &::after
+      position: absolute
+      left: 0px
+      bottom: -2px
+      background: $light
+      width: 100%
+      height: 2px
+      content: ''
+
+  >ol
+    margin-bottom: 40px
+
+    >li
+      line-height: 1.7em
+
+  >.more
+    color: $primary
+    border-bottom-color: $primary
+
+  .fee-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    >.column
+      display: flex
+
+      z-index: 500
+
+      &.one
+        margin-top: 60px
+
+      &.two
+        margin-bottom: 90px
+
+      >.quater
+        width: 200px
+        height: 200px
+        position: relative
+
+        z-index: 500
+
+        &.one
+          border-top-left-radius: 100%
+          border-top: 1px solid $light
+
+          background: $light
+
+          > h5
+            bottom: 40px
+            right: 40px
+
+        &.two
+          border-top-right-radius: 100%
+          border-top: 1px solid $light
+
+          > h5
+            bottom: 40px
+            left: 40px
+
+        &.three
+          border-bottom-left-radius: 100%
+          border-bottom: 1px solid $light
+
+          > h5
+            top: 40px
+            right: 40px
+
+        &.four
+          border-bottom-right-radius: 100%
+          border-bottom: 1px solid $light
+
+          background: $light
+
+          > h5
+            top: 40px
+            left: 40px
+
+        > h5
+          position: absolute
+          font-size: 1.1em
+
+        .circle
+          position: absolute
+
+          width: 5px
+          height: 5px
+
+          background: white
+
+          border: 2px solid $primary
+            radius: 100%
+
+          z-index: 1000
+
+          &.one
+            bottom: -5px
+            left: -5px
+
+          &.two
+            top: -5px
+            left: -5px
+
+            > p
+              position: absolute
+              top: 15px
+              left: -40px
+              right: 0px
+              margin: 0 auto
+              width: 100px
+              text-align: center
+
+          &.three
+            bottom: -5px
+            right: -5px
+
+            > p
+              position: absolute
+              top: 15px
+              left: -40px
+              right: 0px
+              margin: 0 auto
+              width: 100px
+              text-align: center
+
+          &.four
+            top: -5px
+            right: -5px
