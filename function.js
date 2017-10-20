@@ -6,6 +6,8 @@ $(document).ready(function(){
     $('ul.about-us').toggleClass('clicked');
     $('span.about').toggleClass('clicked');
 
+    $('.primary>.wrapper').addClass('open');
+
     $('li.grace').removeClass('clicked');
     $('ul.grace-schools').removeClass('clicked');
     $('span.schools').removeClass('clicked');
@@ -16,18 +18,24 @@ $(document).ready(function(){
     $('ul.grace-schools').toggleClass('clicked');
     $('span.schools').toggleClass('clicked');
 
+    $('.primary>.wrapper').addClass('open');
+
     $('li.about').removeClass('clicked');
     $('ul.about-us').removeClass('clicked');
     $('span.about').removeClass('clicked');
   });
+
   $('li.menu-contact, li.life').click(function() {
     $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
+    $('.primary>.wrapper').removeClass('open');
   });
+
   $('.menu-normal').click(function(e) {
     e.stopPropagation();
   });
   $(document).click(function(e) {
     $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
+    $('.primary>.wrapper').removeClass('open');
   });
 
 // Rules

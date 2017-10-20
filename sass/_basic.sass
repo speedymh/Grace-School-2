@@ -52,7 +52,7 @@ a
   color: black
 
 .wrapper
-  width: 1060px
+  max-width: 1060px
   padding: 0 40px
   margin: 0 auto
 
@@ -358,7 +358,7 @@ body
           position: center
 
         height: 72px
-        width: 75px
+        width: 70px
 
       .primary-list
         list-style: none
@@ -516,6 +516,14 @@ body
         font-size: 1.5em
         color: #acacac
 
+    &.index-orphan
+      >.wrapper
+        padding-top: 20px
+        padding-bottom: 20px
+
+        >h3
+          line-height: 1.5em
+
     &.saturday
       background: white
       color: black
@@ -540,15 +548,67 @@ body
             text-align: right
 
   footer
-    background: $light
+    background: $super-light
 
     font-size: .8em
 
-    .wrapper
+    >.wrapper
       display: flex
-      align-items: center
+      align-items: flex-start
       justify-content: space-between
 
+      padding: 30px 0px
+
+      .logo-footer
+        background: url('../images/logo-grey.png')
+          size: cover
+          position: center
+
+        height: 52px
+        width: 50px
+
+      >ul
+        margin: 0
+        padding: 0
+        list-style: none
+
+        color: $dark
+
+        >li
+
+          &:nth-child(1)
+            position: relative
+            margin-bottom: 5px
+
+            &::after
+              position: absolute
+              left: 0px
+              bottom: -1px
+
+              content: ' '
+
+              height: 1.3px
+              width: 100%
+              background: $medium
+
+          >a
+            color: $dark
+
+            &:hover
+              color: black
+
+          >ul
+            list-style: none
+            margin: 0
+            padding: 0
+
+        &.meta-data
+          >li
+            &:nth-child(1)
+              margin-bottom: 8px
+
+            &:nth-child(2)
+              margin-bottom: 8px
 
 .pop-up
   display: inline

@@ -1,23 +1,12 @@
 body
 
   .primary.index
-    position: fixed
-    box-shadow: 0px 5px 20px rgba(0,0,0,.15)
 
-    .wrapper
-      border-bottom: none
+    >.wrapper
+      border-bottom: 1px solid white
 
-      >.primary-list
-        >.menu-normal
-          >.underline
-            bottom: 0px
-
-  .secondary.index
-    position: fixed
-
-    >.secondary-list
-      border-bottom: none
-      box-shadow: 0px 5px 20px rgba(0,0,0,.15)
+      &.open
+        border-bottom: 1px solid $light
 
   .index-header
     height: 100vh
@@ -133,7 +122,7 @@ body
           order: 1
 
         &.primary-school
-          background: url('../images/secondary school.jpg')
+          background: url('../images/IMG_9631.jpg')
             size: cover
             position: center
 

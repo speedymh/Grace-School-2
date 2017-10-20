@@ -1,0 +1,164 @@
+.motto.wrapper.small.team.contact
+  >h3
+    margin-top: 160px
+    font-size: 3.8em
+
+  >h5
+    margin-top: 2px
+
+  .hello-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+    padding: 30px 0px
+
+    .secretary
+      width: 35%
+      height: 300px
+      background: $light
+      margin-right: 60px
+
+    .contact-data
+      width: 65%
+
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      flex-direction: column
+
+      >h5
+        text-transform: uppercase
+        color: $medium
+        margin-bottom: 10px
+        letter-spacing: .4px
+
+      >h4
+        margin-top: 0px
+        margin-bottom: 35px
+
+      >div
+        color: $dark
+
+        &.phone
+          display: flex
+          align-items: center
+          justify-content: flex-start
+
+          margin-bottom: 4px
+
+        &.email
+          display: flex
+          align-items: center
+          justify-content: flex-start
+
+        >p
+          margin: 0px
+
+          &:nth-child(1)
+            margin-right: 15px
+            font-weight: 600
+
+      >.pop-up
+        margin-top: 60px
+        margin-left: 0px
+
+.location
+  display: flex
+  align-items: center
+  justify-content: center
+
+  background: $super-light
+
+  &:nth-child(2)
+    border-bottom: 1px solid $light
+
+  .maps
+    width: 50%
+    height: 550px
+    background: $light
+
+  .information-wrapper
+    width: 50%
+    height: 100%
+
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    .grid-wrapper
+      position: relative
+
+      width: 530px
+      height: 100%
+      padding: 0px 40px
+
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      flex-direction: column
+
+      >h3
+        font-size: 1.8em
+
+        position: relative
+
+        &::after
+          content: ' '
+          height: 2px
+          width: 100%
+          background: $primary
+
+          position: absolute
+          bottom: -2px
+          left: 0px
+
+      .adress-wrapper
+        height: 100%
+
+        >ul
+          list-style: none
+          padding: 0px
+          margin: 20px 0px 60px
+          font-size: 1.1em
+
+          .secondary-li
+            text-align: right
+
+
+      .more
+        position: absolute
+        bottom: -10px
+        left: 40px
+
+        &.secondary-button
+          left: auto
+          right: 40px
+
+  &.secondary-school
+    >.information-wrapper
+      >.grid-wrapper
+        align-items: flex-end
+
+.get-in-touch
+  &.contact
+    >h3
+      position: relative
+
+      &::after
+        position: absolute
+        left: 0px
+        bottom: -2px
+
+        content: ' '
+
+        height: 2px
+        width: 100%
+        background: black
+
+
+
+  >.email
+    font-size: 1.7em
+    margin-top: 30px
+    color: $primary
