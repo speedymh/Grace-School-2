@@ -13,13 +13,14 @@
 
   z-index: 999
 
-  border-radius: 1px
+  border-radius: 3px
+  overflow: hidden
 
   // overflow-y: scroll
 
   box-shadow: 2px 2px 30px rgba(0,0,0,.15)
 
-  padding: 30px 30px 60px
+  padding: 0px 0px 60px
 
   transform: translateY(-40px)
   opacity: 0
@@ -31,44 +32,52 @@
   // .card-wrapper
   //   position: relative
 
-  overflow-y: scroll
+  .card-header
+    position: relative
+    border-bottom: 1px solid $light
 
-  .cross
-    position: fixed
-    top: 20px
-    right: 20px
+    >h3
+      position: relative
+      color: black
+      margin: 18px 30px
+      padding: 0
 
-    width: 40px
-    height: 40px
-
-    cursor: pointer
-
-    transition: .4s ease-in-out
-
-    >span
-      position: absolute
+    .cross
+      position: fixed
       top: 20px
+      right: 20px
 
       width: 40px
-      height: 2.5px
+      height: 40px
 
-      border-radius: 1px
+      cursor: pointer
 
-      background: $light
+      transition: .4s ease-in-out
 
-      transition: all .1s ease-in-out
+      >span
+        position: absolute
+        top: 20px
 
-      &:nth-child(1)
-        transform: rotateZ(45deg)
+        width: 40px
+        height: 2.5px
 
-      &:nth-child(2)
-        transform: rotateZ(-45deg)
+        border-radius: 1px
 
-    &:hover >span
-      background: $dark
+        background: $light
 
-    &:hover
-      transform: rotate(90deg)
+        transition: all .1s ease-in-out
+
+        &:nth-child(1)
+          transform: rotateZ(45deg)
+
+        &:nth-child(2)
+          transform: rotateZ(-45deg)
+
+      &:hover >span
+        background: $dark
+
+      &:hover
+        transform: rotate(90deg)
 
   &.open
     pointer-events: auto
@@ -76,174 +85,168 @@
     opacity: 1
 
   &.further-contacts
-    >ul
-      padding: 0
-      margin: 0
-      margin-bottom: 30px
+    >.card-content
 
-      list-style: none
+      >ul
+        padding: 0
+        margin: 0
+        margin-bottom: 30px
+
+        list-style: none
+
+        >li
+          >p
+            margin: 0
+
+            &:nth-child(1)
+              font-size: 1.4em
+              font-weight: 600
+              margin-bottom: 6px
+
+            &:nth-child(2)
+              padding-left: 5px
+              margin-bottom: 20px
+
+              font-size: 1.1em
+
+              display: flex
+              align-items: center
+              justify-content: flex-start
+
+              >.chevron-right
+                transform: rotate(-90deg)
+                height: 10px
+                width: 10px
+                margin-right: 7px
+
+  .card-content
+    padding: 20px
+    overflow-y: scroll
+
+    max-height: calc((90vh - 60px) - 80px)
+
+    >.more
+      color: $primary
+      border-bottom-color: $primary
+
+    >.image
+      width: 100%
+
+      margin-bottom: 40px
+
+    >ol
+      margin-bottom: 40px
 
       >li
-        >p
-          margin: 0
+        line-height: 1.7em
 
-          &:nth-child(1)
-            font-size: 1.4em
-            font-weight: 600
-            margin-bottom: 6px
-
-          &:nth-child(2)
-            padding-left: 5px
-            margin-bottom: 20px
-
-            font-size: 1.1em
-
-            display: flex
-            align-items: center
-            justify-content: flex-start
-
-            >.chevron-right
-              transform: rotate(-90deg)
-              height: 10px
-              width: 10px
-              margin-right: 7px
-
-  >.image
-    width: 100%
-
-    margin-bottom: 40px
-
-
-  >h3
-    position: relative
-    color: black
-
-    &::after
-      position: absolute
-      left: 0px
-      bottom: -2px
-      background: $light
-      width: 100%
-      height: 2px
-      content: ''
-
-  >ol
-    margin-bottom: 40px
-
-    >li
-      line-height: 1.7em
-
-  >.more
-    color: $primary
-    border-bottom-color: $primary
-
-  .fee-wrapper
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-
-    >.column
+    .fee-wrapper
       display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
 
-      z-index: 500
-
-      &.one
-        margin-top: 60px
-
-      &.two
-        margin-bottom: 90px
-
-      >.quater
-        width: 200px
-        height: 200px
-        position: relative
+      >.column
+        display: flex
 
         z-index: 500
 
         &.one
-          border-top-left-radius: 100%
-          border-top: 1px solid $light
-
-          background: $light
-
-          > h5
-            bottom: 40px
-            right: 40px
+          margin-top: 60px
 
         &.two
-          border-top-right-radius: 100%
-          border-top: 1px solid $light
+          margin-bottom: 90px
 
-          > h5
-            bottom: 40px
-            left: 40px
+        >.quater
+          width: 200px
+          height: 200px
+          position: relative
 
-        &.three
-          border-bottom-left-radius: 100%
-          border-bottom: 1px solid $light
-
-          > h5
-            top: 40px
-            right: 40px
-
-        &.four
-          border-bottom-right-radius: 100%
-          border-bottom: 1px solid $light
-
-          background: $light
-
-          > h5
-            top: 40px
-            left: 40px
-
-        > h5
-          position: absolute
-          font-size: 1.1em
-
-        .circle
-          position: absolute
-
-          width: 5px
-          height: 5px
-
-          background: white
-
-          border: 2px solid $primary
-            radius: 100%
-
-          z-index: 1000
+          z-index: 500
 
           &.one
-            bottom: -5px
-            left: -5px
+            border-top-left-radius: 100%
+            border-top: 1px solid $light
+
+            background: $light
+
+            > h5
+              bottom: 40px
+              right: 40px
 
           &.two
-            top: -5px
-            left: -5px
+            border-top-right-radius: 100%
+            border-top: 1px solid $light
 
-            > p
-              position: absolute
-              top: 15px
-              left: -40px
-              right: 0px
-              margin: 0 auto
-              width: 100px
-              text-align: center
+            > h5
+              bottom: 40px
+              left: 40px
 
           &.three
-            bottom: -5px
-            right: -5px
+            border-bottom-left-radius: 100%
+            border-bottom: 1px solid $light
 
-            > p
-              position: absolute
-              top: 15px
-              left: -40px
-              right: 0px
-              margin: 0 auto
-              width: 100px
-              text-align: center
+            > h5
+              top: 40px
+              right: 40px
 
           &.four
-            top: -5px
-            right: -5px
+            border-bottom-right-radius: 100%
+            border-bottom: 1px solid $light
+
+            background: $light
+
+            > h5
+              top: 40px
+              left: 40px
+
+          > h5
+            position: absolute
+            font-size: 1.1em
+
+          .circle
+            position: absolute
+
+            width: 5px
+            height: 5px
+
+            background: white
+
+            border: 2px solid $primary
+              radius: 100%
+
+            z-index: 1000
+
+            &.one
+              bottom: -5px
+              left: -5px
+
+            &.two
+              top: -5px
+              left: -5px
+
+              > p
+                position: absolute
+                top: 15px
+                left: -40px
+                right: 0px
+                margin: 0 auto
+                width: 100px
+                text-align: center
+
+            &.three
+              bottom: -5px
+              right: -5px
+
+              > p
+                position: absolute
+                top: 15px
+                left: -40px
+                right: 0px
+                margin: 0 auto
+                width: 100px
+                text-align: center
+
+            &.four
+              top: -5px
+              right: -5px

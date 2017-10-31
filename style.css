@@ -333,11 +333,7 @@ body .primary {
     justify-content: space-between;
     border-bottom: 1px solid #e1e1e1; }
     body .primary .wrapper .logo {
-      background: url("images/logo.jpg");
-        background-size: cover;
-        background-position: center;
-      height: 72px;
-      width: 70px; }
+      height: 72px; }
     body .primary .wrapper .primary-list {
       list-style: none;
       display: -webkit-box;
@@ -1080,81 +1076,6 @@ body .meals-section {
   .get-in-touch > .more-big {
     margin-top: 30px; }
 
-body .history {
-  margin: 120px auto;
-  text-align: center; }
-  body .history h3.second {
-    margin-bottom: 250px; }
-  body .history hr {
-    margin: 25px auto 40px; }
-  body .history .second-wrapper {
-    width: 940px;
-    margin: 200px auto 300px !important;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 auto; }
-    body .history .second-wrapper .line {
-      height: 2px;
-      background: grey; }
-      body .history .second-wrapper .line.short {
-        width: 180px; }
-      body .history .second-wrapper .line.long {
-        width: 260px; }
-    body .history .second-wrapper .circle {
-      position: relative;
-      width: 5px;
-      height: 5px;
-      border: 2px solid grey;
-        border-radius: 50%;
-      margin: 3px; }
-      body .history .second-wrapper .circle .number {
-        position: absolute;
-        left: -10px; }
-        body .history .second-wrapper .circle .number.up {
-          top: -4px; }
-        body .history .second-wrapper .circle .number.down {
-          top: -42px; }
-      body .history .second-wrapper .circle .vertical {
-        width: 2px;
-        background: grey;
-        position: absolute;
-        left: 1px; }
-        body .history .second-wrapper .circle .vertical.up {
-          bottom: 10px;
-          height: 150px; }
-          body .history .second-wrapper .circle .vertical.up.first {
-            height: 180px; }
-        body .history .second-wrapper .circle .vertical.down {
-          top: 10px;
-          height: 80px; }
-        body .history .second-wrapper .circle .vertical .left {
-          position: absolute;
-          right: 0;
-          width: 140px; }
-          body .history .second-wrapper .circle .vertical .left.up {
-            top: 0; }
-          body .history .second-wrapper .circle .vertical .left.down {
-            bottom: 0; }
-          body .history .second-wrapper .circle .vertical .left .percentage {
-            position: absolute;
-            top: -25px;
-            color: darkorange;
-            font-weight: 700;
-            letter-spacing: .5px; }
-            body .history .second-wrapper .circle .vertical .left .percentage.decimal {
-              left: -50px; }
-            body .history .second-wrapper .circle .vertical .left .percentage.no-decimal {
-              left: -40px; }
-          body .history .second-wrapper .circle .vertical .left .text {
-            width: 120px;
-            text-align: left; }
-
 .card {
   background: white;
   position: fixed;
@@ -1166,10 +1087,11 @@ body .history {
   width: calc(60vw - 60px);
   max-height: calc(90vh - 60px);
   z-index: 999;
-  border-radius: 1px;
+  border-radius: 3px;
+  overflow: hidden;
   -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
-  padding: 30px 30px 60px;
+  padding: 0px 0px 60px;
   -webkit-transform: translateY(-40px);
   -ms-transform: translateY(-40px);
   transform: translateY(-40px);
@@ -1177,60 +1099,67 @@ body .history {
   -webkit-transition: 0.35s cubic-bezier(0.22, -0.12, 0.63, 2.41);
   -o-transition: 0.35s cubic-bezier(0.22, -0.12, 0.63, 2.41);
   transition: 0.35s cubic-bezier(0.22, -0.12, 0.63, 2.41);
-  pointer-events: none;
-  overflow-y: scroll; }
-  .card .cross {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    -webkit-transition: .4s ease-in-out;
-    -o-transition: .4s ease-in-out;
-    transition: .4s ease-in-out; }
-    .card .cross > span {
-      position: absolute;
+  pointer-events: none; }
+  .card .card-header {
+    position: relative;
+    border-bottom: 1px solid #e1e1e1; }
+    .card .card-header > h3 {
+      position: relative;
+      color: black;
+      margin: 18px 30px;
+      padding: 0; }
+    .card .card-header .cross {
+      position: fixed;
       top: 20px;
+      right: 20px;
       width: 40px;
-      height: 2.5px;
-      border-radius: 1px;
-      background: #e1e1e1;
-      -webkit-transition: all .1s ease-in-out;
-      -o-transition: all .1s ease-in-out;
-      transition: all .1s ease-in-out; }
-      .card .cross > span:nth-child(1) {
-        -webkit-transform: rotateZ(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotateZ(45deg); }
-      .card .cross > span:nth-child(2) {
-        -webkit-transform: rotateZ(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotateZ(-45deg); }
-    .card .cross:hover > span {
-      background: #707070; }
-    .card .cross:hover {
-      -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      transform: rotate(90deg); }
+      height: 40px;
+      cursor: pointer;
+      -webkit-transition: .4s ease-in-out;
+      -o-transition: .4s ease-in-out;
+      transition: .4s ease-in-out; }
+      .card .card-header .cross > span {
+        position: absolute;
+        top: 20px;
+        width: 40px;
+        height: 2.5px;
+        border-radius: 1px;
+        background: #e1e1e1;
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out; }
+        .card .card-header .cross > span:nth-child(1) {
+          -webkit-transform: rotateZ(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotateZ(45deg); }
+        .card .card-header .cross > span:nth-child(2) {
+          -webkit-transform: rotateZ(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotateZ(-45deg); }
+      .card .card-header .cross:hover > span {
+        background: #707070; }
+      .card .card-header .cross:hover {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
   .card.open {
     pointer-events: auto;
     -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px);
     opacity: 1; }
-  .card.further-contacts > ul {
+  .card.further-contacts > .card-content > ul {
     padding: 0;
     margin: 0;
     margin-bottom: 30px;
     list-style: none; }
-    .card.further-contacts > ul > li > p {
+    .card.further-contacts > .card-content > ul > li > p {
       margin: 0; }
-      .card.further-contacts > ul > li > p:nth-child(1) {
+      .card.further-contacts > .card-content > ul > li > p:nth-child(1) {
         font-size: 1.4em;
         font-weight: 600;
         margin-bottom: 6px; }
-      .card.further-contacts > ul > li > p:nth-child(2) {
+      .card.further-contacts > .card-content > ul > li > p:nth-child(2) {
         padding-left: 5px;
         margin-bottom: 20px;
         font-size: 1.1em;
@@ -1246,132 +1175,125 @@ body .history {
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
         justify-content: flex-start; }
-        .card.further-contacts > ul > li > p:nth-child(2) > .chevron-right {
+        .card.further-contacts > .card-content > ul > li > p:nth-child(2) > .chevron-right {
           -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
           height: 10px;
           width: 10px;
           margin-right: 7px; }
-  .card > .image {
-    width: 100%;
-    margin-bottom: 40px; }
-  .card > h3 {
-    position: relative;
-    color: black; }
-    .card > h3::after {
-      position: absolute;
-      left: 0px;
-      bottom: -2px;
-      background: #e1e1e1;
+  .card .card-content {
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: calc((90vh - 60px) - 80px); }
+    .card .card-content > .more {
+      color: #ff6200;
+      border-bottom-color: #ff6200; }
+    .card .card-content > .image {
       width: 100%;
-      height: 2px;
-      content: ''; }
-  .card > ol {
-    margin-bottom: 40px; }
-    .card > ol > li {
-      line-height: 1.7em; }
-  .card > .more {
-    color: #ff6200;
-    border-bottom-color: #ff6200; }
-  .card .fee-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .card .fee-wrapper > .column {
+      margin-bottom: 40px; }
+    .card .card-content > ol {
+      margin-bottom: 40px; }
+      .card .card-content > ol > li {
+        line-height: 1.7em; }
+    .card .card-content .fee-wrapper {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      z-index: 500; }
-      .card .fee-wrapper > .column.one {
-        margin-top: 60px; }
-      .card .fee-wrapper > .column.two {
-        margin-bottom: 90px; }
-      .card .fee-wrapper > .column > .quater {
-        width: 200px;
-        height: 200px;
-        position: relative;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .card .card-content .fee-wrapper > .column {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
         z-index: 500; }
-        .card .fee-wrapper > .column > .quater.one {
-          border-top-left-radius: 100%;
-          border-top: 1px solid #e1e1e1;
-          background: #e1e1e1; }
-          .card .fee-wrapper > .column > .quater.one > h5 {
-            bottom: 40px;
-            right: 40px; }
-        .card .fee-wrapper > .column > .quater.two {
-          border-top-right-radius: 100%;
-          border-top: 1px solid #e1e1e1; }
-          .card .fee-wrapper > .column > .quater.two > h5 {
-            bottom: 40px;
-            left: 40px; }
-        .card .fee-wrapper > .column > .quater.three {
-          border-bottom-left-radius: 100%;
-          border-bottom: 1px solid #e1e1e1; }
-          .card .fee-wrapper > .column > .quater.three > h5 {
-            top: 40px;
-            right: 40px; }
-        .card .fee-wrapper > .column > .quater.four {
-          border-bottom-right-radius: 100%;
-          border-bottom: 1px solid #e1e1e1;
-          background: #e1e1e1; }
-          .card .fee-wrapper > .column > .quater.four > h5 {
-            top: 40px;
-            left: 40px; }
-        .card .fee-wrapper > .column > .quater > h5 {
-          position: absolute;
-          font-size: 1.1em; }
-        .card .fee-wrapper > .column > .quater .circle {
-          position: absolute;
-          width: 5px;
-          height: 5px;
-          background: white;
-          border: 2px solid #ff6200;
-            border-radius: 100%;
-          z-index: 1000; }
-          .card .fee-wrapper > .column > .quater .circle.one {
-            bottom: -5px;
-            left: -5px; }
-          .card .fee-wrapper > .column > .quater .circle.two {
-            top: -5px;
-            left: -5px; }
-            .card .fee-wrapper > .column > .quater .circle.two > p {
-              position: absolute;
-              top: 15px;
-              left: -40px;
-              right: 0px;
-              margin: 0 auto;
-              width: 100px;
-              text-align: center; }
-          .card .fee-wrapper > .column > .quater .circle.three {
-            bottom: -5px;
-            right: -5px; }
-            .card .fee-wrapper > .column > .quater .circle.three > p {
-              position: absolute;
-              top: 15px;
-              left: -40px;
-              right: 0px;
-              margin: 0 auto;
-              width: 100px;
-              text-align: center; }
-          .card .fee-wrapper > .column > .quater .circle.four {
-            top: -5px;
-            right: -5px; }
+        .card .card-content .fee-wrapper > .column.one {
+          margin-top: 60px; }
+        .card .card-content .fee-wrapper > .column.two {
+          margin-bottom: 90px; }
+        .card .card-content .fee-wrapper > .column > .quater {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          z-index: 500; }
+          .card .card-content .fee-wrapper > .column > .quater.one {
+            border-top-left-radius: 100%;
+            border-top: 1px solid #e1e1e1;
+            background: #e1e1e1; }
+            .card .card-content .fee-wrapper > .column > .quater.one > h5 {
+              bottom: 40px;
+              right: 40px; }
+          .card .card-content .fee-wrapper > .column > .quater.two {
+            border-top-right-radius: 100%;
+            border-top: 1px solid #e1e1e1; }
+            .card .card-content .fee-wrapper > .column > .quater.two > h5 {
+              bottom: 40px;
+              left: 40px; }
+          .card .card-content .fee-wrapper > .column > .quater.three {
+            border-bottom-left-radius: 100%;
+            border-bottom: 1px solid #e1e1e1; }
+            .card .card-content .fee-wrapper > .column > .quater.three > h5 {
+              top: 40px;
+              right: 40px; }
+          .card .card-content .fee-wrapper > .column > .quater.four {
+            border-bottom-right-radius: 100%;
+            border-bottom: 1px solid #e1e1e1;
+            background: #e1e1e1; }
+            .card .card-content .fee-wrapper > .column > .quater.four > h5 {
+              top: 40px;
+              left: 40px; }
+          .card .card-content .fee-wrapper > .column > .quater > h5 {
+            position: absolute;
+            font-size: 1.1em; }
+          .card .card-content .fee-wrapper > .column > .quater .circle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: white;
+            border: 2px solid #ff6200;
+              border-radius: 100%;
+            z-index: 1000; }
+            .card .card-content .fee-wrapper > .column > .quater .circle.one {
+              bottom: -5px;
+              left: -5px; }
+            .card .card-content .fee-wrapper > .column > .quater .circle.two {
+              top: -5px;
+              left: -5px; }
+              .card .card-content .fee-wrapper > .column > .quater .circle.two > p {
+                position: absolute;
+                top: 15px;
+                left: -40px;
+                right: 0px;
+                margin: 0 auto;
+                width: 100px;
+                text-align: center; }
+            .card .card-content .fee-wrapper > .column > .quater .circle.three {
+              bottom: -5px;
+              right: -5px; }
+              .card .card-content .fee-wrapper > .column > .quater .circle.three > p {
+                position: absolute;
+                top: 15px;
+                left: -40px;
+                right: 0px;
+                margin: 0 auto;
+                width: 100px;
+                text-align: center; }
+            .card .card-content .fee-wrapper > .column > .quater .circle.four {
+              top: -5px;
+              right: -5px; }
 
 body .secondary-header {
   background: url("images/secondary school.jpg");
