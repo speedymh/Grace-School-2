@@ -110,6 +110,15 @@ $(document).ready(function(){
     $('.card.non-t-secondary').removeClass('open');
   });
 
+// Further Contacts
+
+  $('.pop-up.contact-numbers').on('click', function() {
+    $('.card.further-contacts').toggleClass('open');
+  });
+  $('.cross').on('click', function() {
+    $('.card.further-contacts').removeClass('open');
+  });
+
     /* Hide all elements outside the visible window */
     //
     // var top_of_object = $(this).position().top;
