@@ -16,6 +16,7 @@ $super-light: #f5f7f8
 $light: #e1e1e1
 $medium: #acacac
 $dark: #707070
+$super-dark: #363636
 
 *
   z-index: 1
@@ -118,6 +119,7 @@ a
 
   .section-content
     width: 70%
+    color: $super-dark
 
     &.contact
       display: flex
@@ -630,3 +632,118 @@ body
   &:hover
     color: $light
     background: $dark
+
+.slider
+  width: 100%
+
+  >.header
+    background: white
+
+    >.wrapper
+      text-align: center
+      position: relative
+
+      >h5
+        color: $dark
+        text-transform: uppercase
+        margin: 25px 0px 5px
+
+      >h3
+        margin: 0px 0px 25px
+
+      >.chevron
+        position: absolute
+        margin: auto
+        opacity: 1
+
+        cursor: pointer
+
+        transition: all .3s ease-in-out
+
+        &.left
+          left: 0px
+          top: 23px
+          height: 30px
+          width: 30px
+          transform: rotate(90deg)
+
+        &.right
+          right: 0px
+          top: 23px
+          height: 30px
+          width: 30px
+          transform: rotate(-90deg)
+
+        &.hide
+          opacity: 0
+          pointer-events: none
+
+  .slider-wrapper
+    border-top: 1px solid $light
+    border-bottom: 1px solid $light
+
+    overflow-x: hidden
+
+    width: 300vw
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    transform: translateX(0vw)
+    transition: all .6s ease-in-out
+
+    &.middle
+      transform: translateX(-100vw)
+
+    &.end
+      transform: translateX(-200vw)
+
+    >.slide
+      width: 100vw
+
+      display: flex
+      align-items: stretch
+      justify-content: center
+
+      >.container
+        // border-left: 1px solid $light
+        // border-right: 1px solid $light
+
+        padding: 60px 0px
+
+        >p
+          font-size: 1.45em
+          color: $super-dark
+
+          padding: 0
+          margin: 0
+
+          line-height: 1.85em
+
+          margin: 0px 90px
+
+          >a
+            position: relative
+            display: inline-block
+            color: $super-dark
+            transition: color .3s ease-in-out
+
+            &::after
+              content: ' '
+              position: absolute
+              left: 0px
+              bottom: 4px
+              height: 2px
+              width: 100%
+              background: $primary
+
+            &:hover
+              color: $primary
+
+
+  .slider-footer
+    text-align: center
+    margin: 90px 0px
+
+    >.more-big

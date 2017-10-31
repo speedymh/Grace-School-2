@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+// Menu
+
   $('li.about').click(function() {
 
     $(this).toggleClass('clicked');
@@ -36,6 +38,41 @@ $(document).ready(function(){
   $(document).click(function(e) {
     $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
     $('.primary>.wrapper').removeClass('open');
+  });
+
+// Slider
+
+// Right
+  $('.chevron.right.moja').on('click', function() {
+    $('.chevron.left.one').removeClass('hide');
+    $(this).addClass('hide');
+    $('.chevron.right.mbili').removeClass('hide');
+    $('.slider>.slider-wrapper').addClass('middle');
+  });
+
+  $('.chevron.right.mbili').on('click', function() {
+    $(this).addClass('hide');
+    $('.chevron.left.one').addClass('hide');
+    $('.chevron.left.two').removeClass('hide');
+    $('.slider>.slider-wrapper').removeClass('middle');
+    $('.slider>.slider-wrapper').addClass('end');
+  });
+
+// Left
+
+  $('.chevron.left.one').on('click', function() {
+    $(this).addClass('hide');
+    $('.chevron.right.moja').removeClass('hide');
+    $('.chevron.right.mbili').addClass('hide');
+    $('.slider>.slider-wrapper').removeClass('middle');
+  });
+
+  $('.chevron.left.two').on('click', function() {
+    $(this).addClass('hide');
+    $('.chevron.left.one').removeClass('hide');
+    $('.chevron.right.mbili').removeClass('hide');
+    $('.slider>.slider-wrapper').removeClass('end');
+    $('.slider>.slider-wrapper').addClass('middle');
   });
 
 // Rules
