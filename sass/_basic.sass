@@ -70,7 +70,7 @@ a
 
   border-bottom: 1.5px solid black
 
-  transition: all .3s ease-in-out
+  transition: all .3s cubic-bezier(0.22,-0.12, 0.63, 1.41)
 
   &:hover
     padding-bottom: 5px
@@ -103,6 +103,10 @@ a
     padding-top: 50px
     margin: 50px auto
     border-top: 1px solid $light
+
+    &.no-border
+      border: none
+      padding: 50px 0
 
     &.information
       margin-top: 50px
@@ -200,6 +204,17 @@ a
 
     color: $dark
 
+  >.pop-up-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    margin-top: 1em
+
+    margin-left: 10px
+
+    >.pop-up
+      margin-right: .6em
+
 .motto
   margin: 120px auto
 
@@ -213,6 +228,9 @@ a
     font-size: 3.2em
     margin-bottom: 50px
 
+    &.school-life-headline
+      margin-top: 160px !important
+
   >h4
     font-size: 1.3em
     text-align: justify
@@ -222,83 +240,19 @@ a
 
     line-height: 1.8em
 
+  >.school-life-image
+    width: 100%
+    height: 400px
+
+    background: url('../images/girls.jpg')
+      position: center -30px
+      size: cover
+
+    margin-bottom: 60px
+
   >.more
     color: $primary
     border-bottom: 1px solid $primary
-
-.numbers
-  border-top: 1px solid $light
-  padding: 90px 0 115px
-  margin: 60px 0
-
-  text-align: center
-
-  background: $light
-
-  >.wrapper
-
-    >h3
-      margin-top: 0px
-      font-size: 2.5em
-
-    >h5
-      color: $dark
-      text-transform: uppercase
-      margin-top: -30px
-      margin-bottom: 50px
-      letter-spacing: .3px
-
-    >.column
-      border-top: 2px solid $light
-      border-left: 2px solid $light
-
-      width: 100%
-
-      display: flex
-      align-items: center
-      justify-content: center
-
-      background: white
-
-      &.two, &.three
-        border-top: none
-
-      >.box
-        border-right: 2px solid $light
-        border-bottom: 2px solid $light
-
-        width: 100%
-        height: 300px
-
-        display: flex
-        align-items: center
-        justify-content: center
-        flex-direction: column
-
-        &.cta
-          position: relative
-          height: auto
-
-          justify-content: flex-start
-          align-items: flex-start
-
-          >.more
-            position: absolute
-            margin: 25px 0
-            color: $dark
-
-            border-bottom: 1px solid $dark
-
-        >h6
-          color: $dark
-          font-size: 1.1em
-          margin-bottom: 15px
-
-        >h3
-          color: $primary
-          font-size: 4em
-
-          margin: 0
 
 .hero-image
   position: static
@@ -307,10 +261,6 @@ a
 
   height: 120vh
   width: 100%
-
-  // transform: translateY(40px)
-
-  // transition: all 1s ease-in-out
 
   &.primary-foto
     background: url('../images/primary.jpg')
@@ -322,10 +272,71 @@ a
       size: cover
       position: center
 
-  &.school-life
-    background: url('../images/girls.jpg')
-      size: cover
-      position: top center
+.numbers
+  box-shadow: 0px 0px 30px rgba(0,0,0,.15) inset
+  background: $super-light
+
+  text-align: center
+
+  padding: 80px 0
+
+  .numbers-wrapper
+    width: 100%
+    background: $super-light
+
+    margin: 30px 0
+
+    border-top: 2px solid $light
+    border-bottom: 2px solid $light
+
+    align-items: center
+
+    >.wrapper
+      display: flex
+      align-items: stretch
+      justify-content: center
+
+      >.box
+        width: 100%
+        height: 100%
+
+        margin: 0
+        padding: 30px 0px
+
+        border-left: 2px solid $light
+
+        &:nth-child(4)
+          border-right: 2px solid $light
+
+        >h5
+          margin: 0
+          margin-bottom: 10px
+          letter-spacing: .05em
+          color: $dark
+          font-size: .9em
+
+        >h3
+          margin: 0
+          color: $primary
+          font-size: 2.2em
+
+  .wrapper-numbers-cta
+
+    display: flex
+    justify-content: space-between
+
+    >.link-container
+      position: relative
+      width: 100%
+
+      display: flex
+      align-items: center
+      justify-content: flex-start
+
+      >.more
+        position: absolute
+        left: 0px
+        top: 0px
 
 body
 
@@ -624,9 +635,92 @@ body
 
   transition: all .1s ease-in-out
 
+  &.head
+    margin: 0px
+
   &:hover
     color: $light
     background: $dark
+
+.we-teach-section
+  padding: 80px 0px 90px
+  border-top: 1px solid $light
+  border-bottom: 1px solid $light
+
+  &:nth-child(3)
+    border-bottom: none
+
+  >.wrapper
+    >h4, >h5
+      text-align: center
+
+    >h4
+      font-size: 1.9em
+      font-weight: 400
+      margin-top: 30px
+      margin-bottom: 0px
+
+      >span
+        position: relative
+
+        &::after
+          position: absolute
+          left: 0px
+          bottom: -5px
+          height: 2px
+          width: 100%
+          background: $primary
+          content: ' '
+
+    >h5
+      margin-top: 25px
+      text-transform: uppercase
+      color: $dark
+      margin-bottom: 80px
+      letter-spacing: .05em
+
+    >.teach-image
+      width: 100%
+      height: 400px
+
+      margin-bottom: 60px
+
+      &.ict-image
+
+        background: url('../images/ict-secondary.jpg')
+          size: cover
+          position: center
+
+      &.sports-image
+        width: 100%
+        height: 400px
+
+        background: url('../images/jump.jpg')
+          size: cover
+          position: center -200px
+
+      &.saturday-image
+        width: 100%
+        height: 400px
+
+        background: url('../images/board.jpg')
+          size: cover
+          position: center
+
+    >p
+      margin: 0
+      font-size: 1.45em
+      color: $super-dark
+
+      padding: 0
+      margin: 0
+      margin-bottom: 30px
+
+      line-height: 1.85em
+
+    >.more
+      color: $primary
+      border-bottom: 1px solid $primary
 
 .slider
   width: 100%
@@ -637,14 +731,16 @@ body
     >.wrapper
       text-align: center
       position: relative
+      padding: 25px 0
 
       >h5
         color: $dark
         text-transform: uppercase
-        margin: 25px 0px 5px
+        margin: 0px 0px 5px
+        letter-spacing: .05em
 
       >h3
-        margin: 0px 0px 25px
+        margin: 0px
 
       >.chevron
         position: absolute
@@ -657,14 +753,14 @@ body
 
         &.left
           left: 0px
-          top: 23px
+          top: 44px
           height: 30px
           width: 30px
           transform: rotate(90deg)
 
         &.right
           right: 0px
-          top: 23px
+          top: 44px
           height: 30px
           width: 30px
           transform: rotate(-90deg)
@@ -674,8 +770,8 @@ body
           pointer-events: none
 
   .slider-wrapper
-    border-top: 1px solid $light
-    border-bottom: 1px solid $light
+    border-top: 2px solid $light
+    border-bottom: 2px solid $light
 
     overflow-x: hidden
 

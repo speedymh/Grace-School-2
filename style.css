@@ -54,9 +54,9 @@ a {
   font-weight: 700;
   letter-spacing: 1.2px;
   border-bottom: 1.5px solid black;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  -webkit-transition: all 0.3s cubic-bezier(0.22, -0.12, 0.63, 1.41);
+  -o-transition: all 0.3s cubic-bezier(0.22, -0.12, 0.63, 1.41);
+  transition: all 0.3s cubic-bezier(0.22, -0.12, 0.63, 1.41); }
   .more:hover {
     padding-bottom: 5px; }
 
@@ -95,6 +95,9 @@ a {
     padding-top: 50px;
     margin: 50px auto;
     border-top: 1px solid #e1e1e1; }
+    .headline-row-text-cta.school-buttons.no-border {
+      border: none;
+      padding: 50px 0; }
     .headline-row-text-cta.school-buttons.information {
       margin-top: 50px;
       color: #707070; }
@@ -184,6 +187,23 @@ a {
     margin-left: -10px;
     font-size: 1.1em;
     color: #707070; }
+  .header-title > .pop-up-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-top: 1em;
+    margin-left: 10px; }
+    .header-title > .pop-up-wrapper > .pop-up {
+      margin-right: .6em; }
 
 .motto {
   margin: 120px auto;
@@ -194,96 +214,24 @@ a {
     margin-top: 15px;
     font-size: 3.2em;
     margin-bottom: 50px; }
+    .motto > h3.school-life-headline {
+      margin-top: 160px !important; }
   .motto > h4 {
     font-size: 1.3em;
     text-align: justify;
     font-weight: 400;
     margin-bottom: 40px;
     line-height: 1.8em; }
+  .motto > .school-life-image {
+    width: 100%;
+    height: 400px;
+    background: url("../images/girls.jpg");
+      background-position: center -30px;
+      background-size: cover;
+    margin-bottom: 60px; }
   .motto > .more {
     color: #ff6200;
     border-bottom: 1px solid #ff6200; }
-
-.numbers {
-  border-top: 1px solid #e1e1e1;
-  padding: 90px 0 115px;
-  margin: 60px 0;
-  text-align: center;
-  background: #e1e1e1; }
-  .numbers > .wrapper > h3 {
-    margin-top: 0px;
-    font-size: 2.5em; }
-  .numbers > .wrapper > h5 {
-    color: #707070;
-    text-transform: uppercase;
-    margin-top: -30px;
-    margin-bottom: 50px;
-    letter-spacing: .3px; }
-  .numbers > .wrapper > .column {
-    border-top: 2px solid #e1e1e1;
-    border-left: 2px solid #e1e1e1;
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background: white; }
-    .numbers > .wrapper > .column.two, .numbers > .wrapper > .column.three {
-      border-top: none; }
-    .numbers > .wrapper > .column > .box {
-      border-right: 2px solid #e1e1e1;
-      border-bottom: 2px solid #e1e1e1;
-      width: 100%;
-      height: 300px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-      .numbers > .wrapper > .column > .box.cta {
-        position: relative;
-        height: auto;
-        -webkit-box-pack: start;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-        align-items: flex-start; }
-        .numbers > .wrapper > .column > .box.cta > .more {
-          position: absolute;
-          margin: 25px 0;
-          color: #707070;
-          border-bottom: 1px solid #707070; }
-      .numbers > .wrapper > .column > .box > h6 {
-        color: #707070;
-        font-size: 1.1em;
-        margin-bottom: 15px; }
-      .numbers > .wrapper > .column > .box > h3 {
-        color: #ff6200;
-        font-size: 4em;
-        margin: 0; }
 
 .hero-image {
   position: static;
@@ -298,10 +246,82 @@ a {
     background: url("../images/laboratory.jpg");
       background-size: cover;
       background-position: center; }
-  .hero-image.school-life {
-    background: url("../images/girls.jpg");
-      background-size: cover;
-      background-position: top center; }
+
+.numbers {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15) inset;
+  background: #f5f7f8;
+  text-align: center;
+  padding: 80px 0; }
+  .numbers .numbers-wrapper {
+    width: 100%;
+    background: #f5f7f8;
+    margin: 30px 0;
+    border-top: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .numbers .numbers-wrapper > .wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .numbers .numbers-wrapper > .wrapper > .box {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 30px 0px;
+        border-left: 2px solid #e1e1e1; }
+        .numbers .numbers-wrapper > .wrapper > .box:nth-child(4) {
+          border-right: 2px solid #e1e1e1; }
+        .numbers .numbers-wrapper > .wrapper > .box > h5 {
+          margin: 0;
+          margin-bottom: 10px;
+          letter-spacing: .05em;
+          color: #707070;
+          font-size: .9em; }
+        .numbers .numbers-wrapper > .wrapper > .box > h3 {
+          margin: 0;
+          color: #ff6200;
+          font-size: 2.2em; }
+  .numbers .wrapper-numbers-cta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .numbers .wrapper-numbers-cta > .link-container {
+      position: relative;
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; }
+      .numbers .wrapper-numbers-cta > .link-container > .more {
+        position: absolute;
+        left: 0px;
+        top: 0px; }
 
 body .primary {
   position: absolute;
@@ -562,9 +582,72 @@ body footer {
   -webkit-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out; }
+  .pop-up.head {
+    margin: 0px; }
   .pop-up:hover {
     color: #e1e1e1;
     background: #707070; }
+
+.we-teach-section {
+  padding: 80px 0px 90px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1; }
+  .we-teach-section:nth-child(3) {
+    border-bottom: none; }
+  .we-teach-section > .wrapper > h4, .we-teach-section > .wrapper > h5 {
+    text-align: center; }
+  .we-teach-section > .wrapper > h4 {
+    font-size: 1.9em;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 0px; }
+    .we-teach-section > .wrapper > h4 > span {
+      position: relative; }
+      .we-teach-section > .wrapper > h4 > span::after {
+        position: absolute;
+        left: 0px;
+        bottom: -5px;
+        height: 2px;
+        width: 100%;
+        background: #ff6200;
+        content: ' '; }
+  .we-teach-section > .wrapper > h5 {
+    margin-top: 25px;
+    text-transform: uppercase;
+    color: #707070;
+    margin-bottom: 80px;
+    letter-spacing: .05em; }
+  .we-teach-section > .wrapper > .teach-image {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 60px; }
+    .we-teach-section > .wrapper > .teach-image.ict-image {
+      background: url("../images/ict-secondary.jpg");
+        background-size: cover;
+        background-position: center; }
+    .we-teach-section > .wrapper > .teach-image.sports-image {
+      width: 100%;
+      height: 400px;
+      background: url("../images/jump.jpg");
+        background-size: cover;
+        background-position: center -200px; }
+    .we-teach-section > .wrapper > .teach-image.saturday-image {
+      width: 100%;
+      height: 400px;
+      background: url("../images/board.jpg");
+        background-size: cover;
+        background-position: center; }
+  .we-teach-section > .wrapper > p {
+    margin: 0;
+    font-size: 1.45em;
+    color: #363636;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    line-height: 1.85em; }
+  .we-teach-section > .wrapper > .more {
+    color: #ff6200;
+    border-bottom: 1px solid #ff6200; }
 
 .slider {
   width: 100%; }
@@ -572,13 +655,15 @@ body footer {
     background: white; }
     .slider > .header > .wrapper {
       text-align: center;
-      position: relative; }
+      position: relative;
+      padding: 25px 0; }
       .slider > .header > .wrapper > h5 {
         color: #707070;
         text-transform: uppercase;
-        margin: 25px 0px 5px; }
+        margin: 0px 0px 5px;
+        letter-spacing: .05em; }
       .slider > .header > .wrapper > h3 {
-        margin: 0px 0px 25px; }
+        margin: 0px; }
       .slider > .header > .wrapper > .chevron {
         position: absolute;
         margin: auto;
@@ -589,7 +674,7 @@ body footer {
         transition: all .3s ease-in-out; }
         .slider > .header > .wrapper > .chevron.left {
           left: 0px;
-          top: 23px;
+          top: 44px;
           height: 30px;
           width: 30px;
           -webkit-transform: rotate(90deg);
@@ -597,7 +682,7 @@ body footer {
           transform: rotate(90deg); }
         .slider > .header > .wrapper > .chevron.right {
           right: 0px;
-          top: 23px;
+          top: 44px;
           height: 30px;
           width: 30px;
           -webkit-transform: rotate(-90deg);
@@ -607,8 +692,8 @@ body footer {
           opacity: 0;
           pointer-events: none; }
   .slider .slider-wrapper {
-    border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
+    border-top: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
     overflow-x: hidden;
     width: 300vw;
     display: -webkit-box;
@@ -837,7 +922,7 @@ body .schools .school {
     -ms-flex-order: 2;
     order: 2;
     padding: 0px 0px 0px 30px;
-    background: #811b7e;
+    background: #ab24a7;
     color: white; }
     body .schools .school.nursery-school .description .school-wrapper > h3 {
       color: white; }
@@ -919,6 +1004,11 @@ body .meals-section {
     body .meals-section > .wrapper .meals-box .meals-container {
       width: 30%;
       padding: 30px; }
+      body .meals-section > .wrapper .meals-box .meals-container > h2 {
+        margin-bottom: .5em; }
+      body .meals-section > .wrapper .meals-box .meals-container > p {
+        line-height: 1.5em;
+        margin-bottom: 30px; }
       body .meals-section > .wrapper .meals-box .meals-container > .more {
         color: #ff6200;
         border-bottom: 1px solid #ff6200; }
