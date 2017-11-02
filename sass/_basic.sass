@@ -719,11 +719,17 @@ body
     transform: translateX(0vw)
     transition: all .6s ease-in-out
 
+    &.primary-slider-wrapper
+      width: 400vw
+
     &.middle
       transform: translateX(-100vw)
 
     &.end
       transform: translateX(-200vw)
+
+    &.real-end
+      transform: translateX(-300vw)
 
     >.slide
       width: 100vw

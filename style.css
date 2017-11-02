@@ -665,6 +665,8 @@ body footer {
     -webkit-transition: all .6s ease-in-out;
     -o-transition: all .6s ease-in-out;
     transition: all .6s ease-in-out; }
+    .slider .slider-wrapper.primary-slider-wrapper {
+      width: 400vw; }
     .slider .slider-wrapper.middle {
       -webkit-transform: translateX(-100vw);
       -ms-transform: translateX(-100vw);
@@ -673,6 +675,10 @@ body footer {
       -webkit-transform: translateX(-200vw);
       -ms-transform: translateX(-200vw);
       transform: translateX(-200vw); }
+    .slider .slider-wrapper.real-end {
+      -webkit-transform: translateX(-300vw);
+      -ms-transform: translateX(-300vw);
+      transform: translateX(-300vw); }
     .slider .slider-wrapper > .slide {
       width: 100vw;
       display: -webkit-box;
@@ -803,6 +809,7 @@ body .index-header {
     background-size: cover;
     background-position: center -40px;
     background-attachment: fixed;
+    background-repeat: no-repeat;
   /* -------- SCHOOLS ------- */ }
   body .index-header::before {
     position: absolute;
@@ -929,7 +936,7 @@ body .schools .school {
     -ms-flex-order: 2;
     order: 2;
     padding: 0px 0px 0px 30px;
-    background: #ab24a7;
+    background: #961f93;
     color: white; }
     body .schools .school.nursery-school .description .school-wrapper > h3 {
       color: white; }
@@ -1430,36 +1437,20 @@ body .secondary-header {
     .campus > .wrapper .feature .feature-image {
       width: 70%;
       height: 100%; }
-      .campus > .wrapper .feature .feature-image.meals {
+      .campus > .wrapper .feature .feature-image.shop {
         -webkit-box-ordinal-group: 2;
         -webkit-order: 1;
         -ms-flex-order: 1;
         order: 1;
-        background: url("../images/board.JPG");
-          background-size: cover;
-          background-position: center; }
-      .campus > .wrapper .feature .feature-image.shop {
-        -webkit-box-ordinal-group: 3;
-        -webkit-order: 2;
-        -ms-flex-order: 2;
-        order: 2;
         background: url("../images/laboratory.JPG");
           background-size: cover;
           background-position: center; }
       .campus > .wrapper .feature .feature-image.transportation {
-        -webkit-box-ordinal-group: 2;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
-        background: url("../images/outer.JPG");
-          background-size: cover;
-          background-position: center; }
-      .campus > .wrapper .feature .feature-image.sports {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2;
-        background: url("../images/spring.JPG");
+        background: url("../images/outer.JPG");
           background-size: cover;
           background-position: center; }
       .campus > .wrapper .feature .feature-image.picknick {
@@ -1486,22 +1477,12 @@ body .secondary-header {
         font-size: 1.1em;
         line-height: 1.5em;
         margin-bottom: 60px; }
-      .campus > .wrapper .feature .feature-content.meals {
-        -webkit-box-ordinal-group: 3;
-        -webkit-order: 2;
-        -ms-flex-order: 2;
-        order: 2; }
       .campus > .wrapper .feature .feature-content.shop {
-        -webkit-box-ordinal-group: 2;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1; }
-      .campus > .wrapper .feature .feature-content.transportation {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2; }
-      .campus > .wrapper .feature .feature-content.sports {
+      .campus > .wrapper .feature .feature-content.transportation {
         -webkit-box-ordinal-group: 2;
         -webkit-order: 1;
         -ms-flex-order: 1;

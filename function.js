@@ -52,10 +52,19 @@ $(document).ready(function(){
 
   $('.chevron.right.mbili').on('click', function() {
     $(this).addClass('hide');
+    $('.chevron.right.tatu').removeClass('hide');
     $('.chevron.left.one').addClass('hide');
     $('.chevron.left.two').removeClass('hide');
     $('.slider>.slider-wrapper').removeClass('middle');
     $('.slider>.slider-wrapper').addClass('end');
+  });
+
+  $('.chevron.right.tatu').on('click', function() {
+    $(this).addClass('hide');
+    $('.chevron.left.two').addClass('hide');
+    $('.chevron.left.three').removeClass('hide');
+    $('.slider>.slider-wrapper').removeClass('end');
+    $('.slider>.slider-wrapper').addClass('real-end');
   });
 
 // Left
@@ -71,8 +80,17 @@ $(document).ready(function(){
     $(this).addClass('hide');
     $('.chevron.left.one').removeClass('hide');
     $('.chevron.right.mbili').removeClass('hide');
+    $('.chevron.right.tatu').addClass('hide');
     $('.slider>.slider-wrapper').removeClass('end');
     $('.slider>.slider-wrapper').addClass('middle');
+  });
+
+  $('.chevron.left.three').on('click', function() {
+    $(this).addClass('hide');
+    $('.chevron.left.two').removeClass('hide');
+    $('.chevron.right.tatu').removeClass('hide');
+    $('.slider>.slider-wrapper').removeClass('real-end');
+    $('.slider>.slider-wrapper').addClass('end');
   });
 
 // Rules
