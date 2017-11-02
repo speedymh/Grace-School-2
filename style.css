@@ -200,7 +200,7 @@ a {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin-top: 1em;
+    margin-top: 1.2em;
     margin-left: 10px; }
     .header-title > .pop-up-wrapper > .pop-up {
       margin-right: .6em; }
@@ -596,61 +596,12 @@ body footer {
     border-bottom: none; }
   .we-teach-section > .wrapper > h4, .we-teach-section > .wrapper > h5 {
     text-align: center; }
-  .we-teach-section > .wrapper > h4 {
-    font-size: 1.9em;
-    font-weight: 400;
-    margin-top: 30px;
-    margin-bottom: 0px; }
-    .we-teach-section > .wrapper > h4 > span {
-      position: relative; }
-      .we-teach-section > .wrapper > h4 > span::after {
-        position: absolute;
-        left: 0px;
-        bottom: -5px;
-        height: 2px;
-        width: 100%;
-        background: #ff6200;
-        content: ' '; }
-  .we-teach-section > .wrapper > h5 {
-    margin-top: 25px;
-    text-transform: uppercase;
-    color: #707070;
-    margin-bottom: 80px;
-    letter-spacing: .05em; }
-  .we-teach-section > .wrapper > .teach-image {
-    width: 100%;
-    height: 400px;
-    margin-bottom: 60px; }
-    .we-teach-section > .wrapper > .teach-image.ict-image {
-      background: url("../images/ict-secondary.jpg");
-        background-size: cover;
-        background-position: center; }
-    .we-teach-section > .wrapper > .teach-image.sports-image {
-      width: 100%;
-      height: 400px;
-      background: url("../images/jump.jpg");
-        background-size: cover;
-        background-position: center -200px; }
-    .we-teach-section > .wrapper > .teach-image.saturday-image {
-      width: 100%;
-      height: 400px;
-      background: url("../images/board.jpg");
-        background-size: cover;
-        background-position: center; }
-  .we-teach-section > .wrapper > p {
-    margin: 0;
-    font-size: 1.45em;
-    color: #363636;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 30px;
-    line-height: 1.85em; }
-  .we-teach-section > .wrapper > .more {
-    color: #ff6200;
-    border-bottom: 1px solid #ff6200; }
 
 .slider {
   width: 100%; }
+  .slider.primary-carousel-section {
+    -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1); }
   .slider > .header {
     background: white; }
     .slider > .header > .wrapper {
@@ -738,6 +689,62 @@ body footer {
       justify-content: center; }
       .slider .slider-wrapper > .slide > .container {
         padding: 60px 0px; }
+        .slider .slider-wrapper > .slide > .container.primary-slider {
+          padding: 80px 0; }
+          .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > h4, .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper h5 {
+            text-align: center; }
+          .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > h4 {
+            font-size: 1.9em;
+            font-weight: 400;
+            margin-top: 30px;
+            margin-bottom: 0px; }
+            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > h4 > span {
+              position: relative; }
+              .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > h4 > span::after {
+                position: absolute;
+                left: 0px;
+                bottom: -5px;
+                height: 2px;
+                width: 100%;
+                background: #ff6200;
+                content: ' '; }
+          .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > h5 {
+            margin-top: 25px;
+            text-transform: uppercase;
+            color: #707070;
+            margin-bottom: 80px;
+            letter-spacing: .05em; }
+          .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > p {
+            margin: 0;
+            font-size: 1.45em;
+            color: #363636;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+            line-height: 1.85em; }
+          .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .more {
+            color: #ff6200;
+            border-bottom: 1px solid #ff6200; }
+          .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 60px; }
+            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.ict-image {
+              background: url("../images/ict-secondary.jpg");
+                background-size: cover;
+                background-position: center; }
+            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.sports-image {
+              width: 100%;
+              height: 400px;
+              background: url("../images/jump.jpg");
+                background-size: cover;
+                background-position: center -200px; }
+            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.saturday-image {
+              width: 100%;
+              height: 400px;
+              background: url("../images/board.jpg");
+                background-size: cover;
+                background-position: center; }
         .slider .slider-wrapper > .slide > .container > p {
           font-size: 1.45em;
           color: #363636;
@@ -764,7 +771,7 @@ body footer {
               color: #ff6200; }
   .slider .slider-footer {
     text-align: center;
-    margin: 90px 0px; }
+    padding: 90px 0px; }
 
 body .primary.index > .wrapper {
   border-bottom: 1px solid white; }
@@ -801,7 +808,7 @@ body .index-header {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100vh;
     content: ' '; }
