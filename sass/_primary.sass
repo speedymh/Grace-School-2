@@ -1,3 +1,23 @@
+.card-background
+  position: fixed
+  top: 0px
+  left: 0px
+  right: 0px
+  bottom: 0px
+  height: 100vh
+  width: 100vw
+  background: rgba(0,0,0,.4)
+
+  z-index: 998
+  pointer-events: none
+
+  opacity: 0
+  transition: all .35s ease-in-out
+
+  &.visible
+    opacity: 1
+    pointer-events: auto
+
 .card
   background: white
   position: fixed

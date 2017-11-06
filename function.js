@@ -93,6 +93,21 @@ $(document).ready(function(){
     $('.slider>.slider-wrapper').addClass('end');
   });
 
+// CARDS
+
+  $('.pop-up').on('click', function() {
+    $('.card-background').addClass('visible');
+  });
+
+  $('.cross').on('click', function() {
+    $('.card-background').removeClass('visible');
+  });
+
+  $('.card-background').on('click', function() {
+    $(this).removeClass('visible');
+    $('.card').removeClass('open');
+  });
+
 // Rules
 
   $('.pop-up.rules').on('click', function() {
