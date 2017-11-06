@@ -70,7 +70,11 @@
     </div>
 
     <section class="location nursery-primary">
-      <div class="maps"></div>
+      <div id="cd-google-map">
+  	     <div id="google-container"></div>
+  	     <div id="cd-zoom-in"></div>
+  	     <div id="cd-zoom-out"></div>
+      </div>
       <div class="information-wrapper">
         <div class="grid-wrapper">
           <h3>Nursery & Primary School</h3>
@@ -84,6 +88,7 @@
           <a href="#" class="more">Find Us On Google Maps</a>
         </div>
       </div>
+
     </section>
 
     <section class="location secondary-school">
@@ -100,7 +105,11 @@
           <a href="#" class="more secondary-button">Find Us On Google Maps</a>
         </div>
       </div>
-      <div class="maps"></div>
+      <div id="cd-google-map-two">
+  	     <div id="google-container-two"></div>
+  	     <div id="cd-zoom-in-two"></div>
+  	     <div id="cd-zoom-out-two"></div>
+      </div>
     </section>
 
     <section class="get-in-touch contact">
@@ -146,6 +155,7 @@
       </div>
     </footer>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuUtJJSlfE5LLRW-ESEgqb1GVvC57Ho4U&callback=initMap" async defer></script>
     <script src="../jquery-3.1.1.min.js"></script>
     <script src="../function.js"></script>
   </body>

@@ -70,16 +70,8 @@
 
   background: $super-light
 
-  &:nth-child(2)
-    border-bottom: 1px solid $light
-
-  .maps
-    width: 50%
-    height: 550px
-    background: $light
-
   .information-wrapper
-    width: 50%
+    width: 50vw
     height: 100%
 
     display: flex
@@ -139,6 +131,95 @@
     >.information-wrapper
       >.grid-wrapper
         align-items: flex-end
+
+.location
+  display: flex
+  align-items: center
+  justify-content: center
+
+  width: 100%
+
+  .informationen-wrapper
+    width: 50vw
+
+// variables - colors
+
+$color-2: $medium  // Zoom
+
+// /* --------------------------------
+//
+// Main components
+//
+// -------------------------------- */
+
+#google-container
+  position: relative
+  width: 50vw
+  height: 500px
+
+#cd-google-map
+  position: relative
+
+#cd-zoom-in, #cd-zoom-out
+  position: absolute
+  top: 0px
+  left: 0px
+  height: 32px
+  width: 32px
+  cursor: pointer
+  transition: all 3s ease-in-out
+  margin-left: 10px
+  background-color: rgba($color-2, .8)
+  background-repeat: no-repeat
+  background-size: 32px 64px
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-controller.svg')
+
+  &:hover
+    background-color: rgba($color-2, 1)
+
+#cd-zoom-in
+	background-position: 50% 0
+	margin-top: 10px
+	margin-bottom: 1px
+
+#cd-zoom-out
+	background-position: 50% -32px
+
+#cd-zoom-out
+  top: 45px
+
+  // TWO
+
+#google-container-two
+  position: relative
+  width: 50vw
+  height: 500px
+
+#cd-google-map-two
+  position: relative
+
+#cd-zoom-in-two, #cd-zoom-out-two
+	height: 32px
+	width: 32px
+	cursor: pointer
+  transition: all 3s ease-in-out
+	margin-left: 10px
+	background-color: rgba($color-2, .8)
+	background-repeat: no-repeat
+	background-size: 32px 64px
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-controller.svg')
+
+	&:hover
+		background-color: rgba($color-2, 1)
+
+#cd-zoom-in-two
+	background-position: 50% 0
+	margin-top: 10px
+	margin-bottom: 1px
+
+
+#cd-zoom-out-two
+	background-position: 50% -32px
 
 .get-in-touch
   &.contact
