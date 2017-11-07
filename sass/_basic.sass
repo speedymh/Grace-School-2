@@ -770,6 +770,9 @@ body
     transform: translateX(0vw)
     transition: all .6s ease-in-out
 
+    &.nursery-slider-wrapper
+      width: 300vw
+
     &.primary-slider-wrapper
       width: 400vw
 
@@ -848,12 +851,17 @@ body
 
               margin-bottom: 60px
 
+              &.nursery-image
+                background: url('../images/nursery-two.jpg')
+                  size: cover
+                  position: center
+
               &.ict-primary-image
                 background: url('../images/ict-primary.jpg')
                   size: cover
                   position: center
 
-              &.ict-image
+              &.ict-secondary-image
                 background: url('../images/ict-secondary-small.jpg')
                   size: cover
                   position: center
@@ -885,7 +893,7 @@ body
             .test-wrapper
               width: 600px
 
-              margin: 60px auto
+              margin: 60px auto 0px
 
               display: flex
               align-items: center

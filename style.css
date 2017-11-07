@@ -712,6 +712,8 @@ body footer {
     -webkit-transition: all .6s ease-in-out;
     -o-transition: all .6s ease-in-out;
     transition: all .6s ease-in-out; }
+    .slider .slider-wrapper.nursery-slider-wrapper {
+      width: 300vw; }
     .slider .slider-wrapper.primary-slider-wrapper {
       width: 400vw; }
     .slider .slider-wrapper.middle {
@@ -781,11 +783,15 @@ body footer {
             width: 100%;
             height: 450px;
             margin-bottom: 60px; }
+            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.nursery-image {
+              background: url("../images/nursery-two.jpg");
+                background-size: cover;
+                background-position: center; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.ict-primary-image {
               background: url("../images/ict-primary.jpg");
                 background-size: cover;
                 background-position: center; }
-            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.ict-image {
+            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.ict-secondary-image {
               background: url("../images/ict-secondary-small.jpg");
                 background-size: cover;
                 background-position: center; }
@@ -809,7 +815,7 @@ body footer {
                 background-position: center; }
           .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper .test-wrapper {
             width: 600px;
-            margin: 60px auto;
+            margin: 60px auto 0px;
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -1689,15 +1695,13 @@ body .secondary-header {
         -webkit-order: 1;
         -ms-flex-order: 1;
         order: 1;
-        background: url("../images/laboratory.JPG");
-          background-size: cover;
-          background-position: center; }
+        background: #e1e1e1; }
       .campus > .wrapper .feature .feature-image.transportation {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2;
-        background: url("../images/outer.JPG");
+        background: url("../images/school-bus-almost-very-small.JPG");
           background-size: cover;
           background-position: center; }
       .campus > .wrapper .feature .feature-image.picknick {
@@ -1705,23 +1709,27 @@ body .secondary-header {
         -webkit-order: 1;
         -ms-flex-order: 1;
         order: 1;
-        background: url("../images/table-centered.JPG");
-          background-size: cover;
-          background-position: center; }
-      .campus > .wrapper .feature .feature-image.sport {
-        -webkit-box-ordinal-group: 2;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
-        background: url("../images/football-very-small.JPG");
-          background-size: cover;
-          background-position: center; }
+        background: #e1e1e1; }
+      .campus > .wrapper .feature .feature-image.music {
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        background: #e1e1e1; }
       .campus > .wrapper .feature .feature-image.nature {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2;
         background: url("../images/nature-very-small.JPG");
+          background-size: cover;
+          background-position: center; }
+      .campus > .wrapper .feature .feature-image.sport {
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        background: url("../images/football-very-small.JPG");
           background-size: cover;
           background-position: center; }
     .campus > .wrapper .feature .feature-content {
