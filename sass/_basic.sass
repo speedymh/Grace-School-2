@@ -717,27 +717,37 @@ body
       >h3
         margin: 0px
 
-      >.chevron
+      >.chevron-wrapper
         position: absolute
         margin: auto
+
+        background: $primary
+        display: flex
+        align-items: center
+        justify-content: center
+
+        width: 40px
+        height: 40px
+        border-radius: 50%
+
+        top: 44px
+
         opacity: 1
 
         cursor: pointer
 
         transition: all .3s ease-in-out
 
+        >img
+          height: 18px
+          width: 18px
+
         &.left
           left: 0px
-          top: 44px
-          height: 30px
-          width: 30px
           transform: rotate(90deg)
 
         &.right
           right: 0px
-          top: 44px
-          height: 30px
-          width: 30px
           transform: rotate(-90deg)
 
         &.hide
@@ -838,6 +848,11 @@ body
 
               margin-bottom: 60px
 
+              &.ict-primary-image
+                background: url('../images/ict-primary.jpg')
+                  size: cover
+                  position: center
+
               &.ict-image
                 background: url('../images/ict-secondary-small.jpg')
                   size: cover
@@ -866,6 +881,128 @@ body
                 background: url('../images/confidence-small.jpg')
                   size: cover
                   position: center
+
+            .test-wrapper
+              width: 600px
+
+              margin: 60px auto
+
+              display: flex
+              align-items: center
+              justify-content: center
+              flex-direction: column
+
+              .line
+                background: $medium
+                width: 2px
+
+                border-radius: 1px
+
+                &.short
+                  height: 40px
+
+                &.medium
+                  height: 80px
+
+                &.long
+                  height: 120px
+
+              .circle
+                position: relative
+
+                width: 8px
+                height: 8px
+
+                border-radius: 50%
+
+                background: $medium
+
+                margin: 5px
+
+                >.date
+                  bottom: -23px
+
+                &.date-left
+
+                  >.date
+                    position: absolute
+
+                    color: $dark
+
+                    right: 15px
+
+                  >.percentage-container
+                    position: absolute
+
+                    left: 25px
+                    bottom: -11px
+
+                    margin: 0
+                    padding: 0
+
+                    color: $primary
+                    font-weight: 600
+                    font-size: 1.25em
+                    letter-spacing: .03em
+
+                    >p
+                      position: absolute
+                      padding: 0 0 0 8px
+
+                      font-weight: 400
+                      font-size: .8em
+                      color: $dark
+                      letter-spacing: normal
+
+                      left: 67px
+                      top: -12px
+
+                      width: 300px
+
+                      border-left: 1px solid $medium
+
+                      &.last
+                        left: 50px
+
+                &.date-right
+
+                  >.date
+                    position: absolute
+
+                    color: $dark
+
+                    left: 15px
+
+                  >.percentage-container
+                    position: absolute
+
+                    right: 15px
+                    bottom: -9px
+
+                    margin: 0
+                    padding: 0
+
+                    color: $primary
+                    font-weight: 600
+                    font-size: 1.25em
+                    letter-spacing: .03em
+
+                    >p
+                      position: absolute
+                      padding: 0 10px 0 0
+
+                      font-weight: 400
+                      font-size: .8em
+                      color: $dark
+                      letter-spacing: normal
+                      text-align: right
+
+                      right: 70px
+                      top: -16px
+
+                      width: 300px
+
+                      border-right: 1px solid $medium
 
         >p
           font-size: 1.45em
