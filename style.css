@@ -260,19 +260,19 @@ a {
   height: 120vh;
   width: 100%; }
   .hero-image.nursery-foto {
-    background: url("../images/nursery-one-edited.jpg");
+    background: url("../images/nursery-one-small.jpg");
       background-size: cover;
       background-position: center; }
   .hero-image.primary-foto {
-    background: url("../images/IMG_9631.jpg");
+    background: url("../images/smile-small-unedited.jpg");
       background-size: cover;
       background-position: center; }
   .hero-image.secondary-foto {
-    background: url("../images/table-centered.jpg");
+    background: url("../images/table-centered-small.jpg");
       background-size: cover;
       background-position: center; }
   .hero-image.team {
-    background: url("../images/laboratory.jpg");
+    background: url("../images/laboratory-small.jpg");
       background-size: cover;
       background-position: center; }
 
@@ -735,7 +735,6 @@ body footer {
           .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > h4 {
             font-size: 1.9em;
             font-weight: 400;
-            margin-top: 30px;
             margin-bottom: 0px; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > h4 > span {
               position: relative; }
@@ -766,28 +765,28 @@ body footer {
             border-bottom: 1px solid #ff6200; }
           .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image {
             width: 100%;
-            height: 400px;
+            height: 450px;
             margin-bottom: 60px; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.ict-image {
-              background: url("../images/ict-secondary.jpg");
+              background: url("../images/ict-secondary-small.jpg");
                 background-size: cover;
                 background-position: center; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.sports-image {
               width: 100%;
               height: 400px;
-              background: url("../images/jump.jpg");
+              background: url("../images/jump-small.jpg");
                 background-size: cover;
-                background-position: center -200px; }
+                background-position: center bottom; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.saturday-image {
               width: 100%;
               height: 400px;
-              background: url("../images/board.jpg");
+              background: url("../images/board-small.jpg");
                 background-size: cover;
                 background-position: center; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.confidence-image {
               width: 100%;
               height: 400px;
-              background: url("../images/confidence.jpg");
+              background: url("../images/confidence-small.jpg");
                 background-size: cover;
                 background-position: center; }
         .slider .slider-wrapper > .slide > .container > p {
@@ -892,7 +891,7 @@ body .index-header {
   -ms-flex-direction: column;
   flex-direction: column;
   color: white;
-  background: url("images/laboratory.jpg");
+  background: url("images/laboratory-very-small.jpg");
     background-size: cover;
     background-position: center -40px;
     background-attachment: fixed;
@@ -994,7 +993,7 @@ body .schools .school {
     width: 70%;
     height: 100%; }
     body .schools .school .image.nursery-school {
-      background: url("../images/nursery-one.jpg");
+      background: url("../images/nursery-one-very-small.jpg");
         background-size: cover;
         background-position: center;
       -webkit-box-ordinal-group: 2;
@@ -1002,7 +1001,7 @@ body .schools .school {
       -ms-flex-order: 1;
       order: 1; }
     body .schools .school .image.primary-school {
-      background: url("../images/IMG_9631.jpg");
+      background: url("../images/smile-very-small-unedited.jpg");
         background-size: cover;
         background-position: center;
       -webkit-box-ordinal-group: 3;
@@ -1010,7 +1009,7 @@ body .schools .school {
       -ms-flex-order: 2;
       order: 2; }
     body .schools .school .image.secondary-school {
-      background: url("../images/table-centered.jpg");
+      background: url("../images/table-centered-very-small.jpg");
         background-size: cover;
         background-position: center;
       -webkit-box-ordinal-group: 2;
@@ -1118,9 +1117,11 @@ body .meals-section {
     body .meals-section > .wrapper .meals-box .meals-image {
       width: 70%;
       height: 100%;
-      background: url("../images/statue.jpg");
-        background-size: cover;
-        background-position: center; }
+      background: #e1e1e1; }
+      body .meals-section > .wrapper .meals-box .meals-image.meals-foto {
+        background: url("../images/statue.jpg");
+          background-size: cover;
+          background-position: center; }
     body .meals-section > .wrapper .meals-box .meals-container {
       width: 30%;
       padding: 30px; }
@@ -1221,15 +1222,15 @@ body .meals-section {
         text-transform: uppercase;
         letter-spacing: .45px; }
       .team-section .wrapper .profile-wrapper .profile.nursery-one > .image {
-        background: url("../images/mtiro-small.jpg");
+        background: url("../images/mtiro-super-small.jpg");
           background-size: cover;
           background-position: center; }
       .team-section .wrapper .profile-wrapper .profile.nursery-two > .image {
-        background: url("../images/regina-small.jpg");
+        background: url("../images/regina-super-small.jpg");
           background-size: cover;
           background-position: center; }
       .team-section .wrapper .profile-wrapper .profile.nursery-three > .image {
-        background: url("../images/olaph-small.jpg");
+        background: url("../images/olaph-super-small.jpg");
           background-size: cover;
           background-position: center; }
   .team-section .wrapper .team-list {
@@ -1282,6 +1283,8 @@ body .meals-section {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
+  .get-in-touch.life-cta {
+    padding: 30px 0; }
   .get-in-touch > h3 {
     margin: 0px; }
   .get-in-touch > .more-big {
@@ -1416,6 +1419,15 @@ body .meals-section {
     padding: 20px;
     overflow-y: scroll;
     max-height: calc((90vh - 60px) - 80px); }
+    .card .card-content > p {
+      margin-top: 0;
+      padding-top: 0; }
+      .card .card-content > p.bigger {
+        font-size: 1.1em;
+        line-height: 1.6em;
+        color: #363636; }
+        .card .card-content > p.bigger > a {
+          color: #60a6da; }
     .card .card-content > .more {
       color: #ff6200;
       border-bottom-color: #ff6200; }
@@ -1532,8 +1544,7 @@ body .secondary-header {
 
 .campus {
   background: #f5f7f8;
-  padding: 120px 0;
-  margin-bottom: 120px; }
+  padding: 120px 0; }
   .campus > .wrapper > h3 {
     margin: 0px;
     margin-bottom: 10px;
@@ -1585,6 +1596,22 @@ body .secondary-header {
         -ms-flex-order: 1;
         order: 1;
         background: url("../images/table-centered.JPG");
+          background-size: cover;
+          background-position: center; }
+      .campus > .wrapper .feature .feature-image.sport {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        background: url("../images/football-very-small.JPG");
+          background-size: cover;
+          background-position: center; }
+      .campus > .wrapper .feature .feature-image.nature {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        background: url("../images/nature-very-small.JPG");
           background-size: cover;
           background-position: center; }
     .campus > .wrapper .feature .feature-content {
