@@ -2,6 +2,9 @@
   background: $super-light
   padding: 120px 0
 
+  &.zinga
+    padding-top: 0
+
   >.wrapper
 
     >h3
@@ -34,7 +37,9 @@
         &.shop
           order: 1
 
-          background: $light
+          background: url('../images/shop-small.JPG')
+            size: cover
+            position: center
 
         &.transportation
           order: 2
@@ -49,19 +54,19 @@
           background: $light
 
         &.music
-          order: 0
+          order: 2
 
           background: $light
 
         &.nature
-          order: 2
+          order: 0
 
           background: url('../images/nature-very-small.JPG')
             size: cover
             position: center
 
         &.sport
-          order: 0
+          order: 2
 
           background: url('../images/football-very-small.JPG')
             size: cover
@@ -85,7 +90,6 @@
         >p
           font-size: 1.1em
           line-height: 1.5em
-          margin-bottom: 60px
 
         &.shop
           order: 2

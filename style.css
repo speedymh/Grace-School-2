@@ -246,7 +246,7 @@ a {
   .motto > .school-life-image {
     width: 100%;
     height: 400px;
-    background: url("../images/girls.jpg");
+    background: url("../images/girls-small.jpg");
       background-position: center -30px;
       background-size: cover;
     margin-bottom: 60px; }
@@ -524,9 +524,8 @@ body .headline-centered {
   body .headline-centered .wrapper > h3 {
     font-size: 1.5em;
     color: #acacac; }
-  body .headline-centered.index-orphan > .wrapper {
-    padding-top: 20px;
-    padding-bottom: 20px; }
+  body .headline-centered.index-orphan {
+    padding: 80px 0; }
     body .headline-centered.index-orphan > .wrapper > h3 {
       line-height: 1.5em; }
   body .headline-centered.saturday {
@@ -635,6 +634,8 @@ body footer {
   .slider.primary-carousel-section {
     -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1); }
+  .slider.history-section {
+    padding-bottom: 30px; }
   .slider > .header {
     background: white; }
     .slider > .header > .wrapper {
@@ -664,10 +665,10 @@ body footer {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        top: 44px;
+        top: 34px;
         opacity: 1;
         cursor: pointer;
         -webkit-transition: all .3s ease-in-out;
@@ -677,15 +678,19 @@ body footer {
           height: 18px;
           width: 18px; }
         .slider > .header > .wrapper > .chevron-wrapper.left {
-          left: 0px;
+          left: 30px;
           -webkit-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
-          transform: rotate(90deg); }
+          transform: rotate(90deg);
+          -webkit-box-shadow: 6px -6px 20px #acacac;
+          box-shadow: 6px -6px 20px #acacac; }
         .slider > .header > .wrapper > .chevron-wrapper.right {
-          right: 0px;
+          right: 30px;
           -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg); }
+          transform: rotate(-90deg);
+          -webkit-box-shadow: -6px 6px 20px #acacac;
+          box-shadow: -6px 6px 20px #acacac; }
         .slider > .header > .wrapper > .chevron-wrapper.hide {
           opacity: 0;
           pointer-events: none; }
@@ -782,13 +787,14 @@ body footer {
           .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image {
             width: 100%;
             height: 450px;
-            margin-bottom: 60px; }
-            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.nursery-image {
-              background: url("../images/nursery-two.jpg");
+            margin-bottom: 60px;
+            background: #e1e1e1; }
+            .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.sleep-image {
+              background: url("../images/sleep-edited-small.jpg");
                 background-size: cover;
                 background-position: center; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.ict-primary-image {
-              background: url("../images/ict-primary.jpg");
+              background: url("../images/ict-primary-small.jpg");
                 background-size: cover;
                 background-position: center; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.ict-secondary-image {
@@ -804,7 +810,7 @@ body footer {
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.saturday-image {
               width: 100%;
               height: 400px;
-              background: url("../images/board-small.jpg");
+              background: url("../images/saturday-small.jpg");
                 background-size: cover;
                 background-position: center; }
             .slider .slider-wrapper > .slide > .container.primary-slider > .wrapper > .teach-image.confidence-image {
@@ -964,6 +970,8 @@ body footer {
       justify-content: space-between; }
       .slider > .slider-secondary-navigation-wrapper > .container > span {
         border-radius: 100%;
+        -webkit-box-shadow: 2px 2px 5px #e1e1e1;
+        box-shadow: 2px 2px 5px #e1e1e1;
         width: 12px;
         height: 12px;
         background: #e1e1e1;
@@ -1007,7 +1015,7 @@ body .index-header {
   -ms-flex-direction: column;
   flex-direction: column;
   color: white;
-  background: url("images/laboratory-very-small.jpg");
+  background: url("images/laboratory-small.jpg");
     background-size: cover;
     background-position: center -40px;
     background-attachment: fixed;
@@ -1234,8 +1242,16 @@ body .meals-section {
       width: 70%;
       height: 100%;
       background: #e1e1e1; }
-      body .meals-section > .wrapper .meals-box .meals-image.meals-foto {
-        background: url("../images/statue.jpg");
+      body .meals-section > .wrapper .meals-box .meals-image.eating {
+        background: url("../images/meals-very-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      body .meals-section > .wrapper .meals-box .meals-image.assemblies {
+        background: url("../images/school-assemblies-very-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      body .meals-section > .wrapper .meals-box .meals-image.director {
+        background: url("../images/director-small.jpg");
           background-size: cover;
           background-position: center; }
     body .meals-section > .wrapper .meals-box .meals-container {
@@ -1247,6 +1263,8 @@ body .meals-section {
       body .meals-section > .wrapper .meals-box .meals-container > p {
         line-height: 1.5em;
         margin-bottom: 30px; }
+        body .meals-section > .wrapper .meals-box .meals-container > p.director {
+          margin-bottom: 0; }
       body .meals-section > .wrapper .meals-box .meals-container > .more {
         color: #ff6200;
         border-bottom: 1px solid #ff6200; }
@@ -1338,14 +1356,39 @@ body .meals-section {
         text-transform: uppercase;
         letter-spacing: .45px; }
       .team-section .wrapper .profile-wrapper .profile.nursery-one > .image {
-        background: url("../images/mtiro-super-small.jpg");
+        background: url("../images/ndekusura-very-small.jpg");
           background-size: cover;
-          background-position: center; }
+          background-position: center;
+        background: #e1e1e1; }
       .team-section .wrapper .profile-wrapper .profile.nursery-two > .image {
-        background: url("../images/regina-super-small.jpg");
+        background: url("../images/grace-very-small.jpg");
           background-size: cover;
           background-position: center; }
       .team-section .wrapper .profile-wrapper .profile.nursery-three > .image {
+        background: url("../images/judith-very-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      .team-section .wrapper .profile-wrapper .profile.primary-one > .image {
+        background: url("../images/primary-teacher-very-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      .team-section .wrapper .profile-wrapper .profile.primary-two > .image {
+        background: url("../images/frank-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      .team-section .wrapper .profile-wrapper .profile.primary-three > .image {
+        background: url("../images/cooking-profile-small.jpg");
+          background-size: cover;
+          background-position: -40px center; }
+      .team-section .wrapper .profile-wrapper .profile.secondary-one > .image {
+        background: url("../images/mtiro-super-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      .team-section .wrapper .profile-wrapper .profile.secondary-two > .image {
+        background: url("../images/regina-super-small.jpg");
+          background-size: cover;
+          background-position: center; }
+      .team-section .wrapper .profile-wrapper .profile.secondary-three > .image {
         background: url("../images/olaph-super-small.jpg");
           background-size: cover;
           background-position: center; }
@@ -1400,7 +1443,7 @@ body .meals-section {
   -ms-flex-direction: column;
   flex-direction: column; }
   .get-in-touch.life-cta {
-    padding: 30px 0; }
+    padding: 60px 0; }
   .get-in-touch > h3 {
     margin: 0px; }
   .get-in-touch > .more-big {
@@ -1548,8 +1591,24 @@ body .meals-section {
       color: #ff6200;
       border-bottom-color: #ff6200; }
     .card .card-content > .image {
+      width: 100%; }
+    .card .card-content > .three-image-wrapper {
+      margin-top: 8px;
       width: 100%;
-      margin-bottom: 40px; }
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .card .card-content > .three-image-wrapper > img {
+        width: 32%; }
     .card .card-content > ol {
       margin-bottom: 40px; }
       .card .card-content > ol > li {
@@ -1661,6 +1720,8 @@ body .secondary-header {
 .campus {
   background: #f5f7f8;
   padding: 120px 0; }
+  .campus.zinga {
+    padding-top: 0; }
   .campus > .wrapper > h3 {
     margin: 0px;
     margin-bottom: 10px;
@@ -1695,7 +1756,9 @@ body .secondary-header {
         -webkit-order: 1;
         -ms-flex-order: 1;
         order: 1;
-        background: #e1e1e1; }
+        background: url("../images/shop-small.JPG");
+          background-size: cover;
+          background-position: center; }
       .campus > .wrapper .feature .feature-image.transportation {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
@@ -1711,24 +1774,24 @@ body .secondary-header {
         order: 1;
         background: #e1e1e1; }
       .campus > .wrapper .feature .feature-image.music {
-        -webkit-box-ordinal-group: 1;
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
-        background: #e1e1e1; }
-      .campus > .wrapper .feature .feature-image.nature {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2;
-        background: url("../images/nature-very-small.JPG");
-          background-size: cover;
-          background-position: center; }
-      .campus > .wrapper .feature .feature-image.sport {
+        background: #e1e1e1; }
+      .campus > .wrapper .feature .feature-image.nature {
         -webkit-box-ordinal-group: 1;
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
+        background: url("../images/nature-very-small.JPG");
+          background-size: cover;
+          background-position: center; }
+      .campus > .wrapper .feature .feature-image.sport {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
         background: url("../images/football-very-small.JPG");
           background-size: cover;
           background-position: center; }
@@ -1746,8 +1809,7 @@ body .secondary-header {
         margin-bottom: 30px; }
       .campus > .wrapper .feature .feature-content > p {
         font-size: 1.1em;
-        line-height: 1.5em;
-        margin-bottom: 60px; }
+        line-height: 1.5em; }
       .campus > .wrapper .feature .feature-content.shop {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
@@ -1788,8 +1850,10 @@ body .secondary-header {
   .motto.wrapper.small.team.contact .hello-wrapper .secretary {
     width: 35%;
     height: 300px;
-    background: #e1e1e1;
-    margin-right: 60px; }
+    margin-right: 60px;
+    background: url("../images/entrance-primary-edited-very-small.jpg");
+      background-size: cover;
+      background-position: center; }
   .motto.wrapper.small.team.contact .hello-wrapper .contact-data {
     width: 65%;
     display: -webkit-box;

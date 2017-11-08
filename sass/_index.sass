@@ -20,7 +20,7 @@ body
 
     color: white
 
-    background: url('images/laboratory-very-small.jpg')
+    background: url('images/laboratory-small.jpg')
       size: cover
       position: center -40px
       attachment: fixed
@@ -260,8 +260,18 @@ body
 
           background: $light
 
-          &.meals-foto
-            background: url('../images/statue.jpg')
+          &.eating
+            background: url('../images/meals-very-small.jpg')
+              size: cover
+              position: center
+
+          &.assemblies
+            background: url('../images/school-assemblies-very-small.jpg')
+              size: cover
+              position: center
+
+          &.director
+            background: url('../images/director-small.jpg')
               size: cover
               position: center
 
@@ -277,6 +287,9 @@ body
           >p
             line-height: 1.5em
             margin-bottom: 30px
+
+            &.director
+              margin-bottom: 0
 
           >.more
             color: $primary
