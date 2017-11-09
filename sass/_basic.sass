@@ -96,8 +96,13 @@ a
 
   margin: 100px auto
 
+  z-index: 100
+
   &.contact
     align-items: flex-start
+
+    >.block
+      display: block
 
   &.school-buttons
     padding-top: 50px
@@ -492,6 +497,27 @@ body
             &:hover
               background: rgb(90, 184, 233)
 
+      .hamburger-container
+        display: none
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+
+        width: 40px
+        height: 40px
+        z-index: 1000
+
+        >span
+          height: 4px
+          width: 40px
+          background: black
+          margin-bottom: 8px
+          border-radius: 2px
+
+          &:nth-child(3)
+            margin-bottom: 0px
+
   .secondary
     position: absolute
     top: 0
@@ -571,6 +597,9 @@ body
         >h3
           line-height: 1.5em
 
+          >.block
+            display: block
+
     &.saturday
       background: white
       color: black
@@ -613,6 +642,37 @@ body
 
         height: 52px
         width: 50px
+
+      >.footer-link-wrapper
+        >ul
+          list-style: none
+          margin: 0
+          padding: 0
+
+          color: $dark
+
+          >li
+
+            &:nth-child(1)
+              position: relative
+              margin-bottom: 5px
+
+              &::after
+                position: absolute
+                left: 0px
+                bottom: -1px
+
+                content: ' '
+
+                height: 1.3px
+                width: 100%
+                background: $medium
+
+            >a
+              color: $dark
+
+              &:hover
+                color: black
 
       >ul
         margin: 0
@@ -710,6 +770,8 @@ body
       position: relative
       padding: 25px 0
 
+      width: 100%
+
       >h5
         color: $dark
         text-transform: uppercase
@@ -726,13 +788,15 @@ body
         background: $primary
         display: flex
         align-items: center
-        justify-content: center
+        justify-content: space-between
 
-        width: 50px
-        height: 50px
-        border-radius: 50%
+        padding: 15px 20px
+        color: white
 
-        top: 34px
+        border-radius: 34px
+        box-shadow: 6px 6px 20px $medium
+
+        top: calc(50% - 22px)
 
         opacity: 1
 
@@ -740,19 +804,41 @@ body
 
         transition: all .3s ease-in-out
 
+
+        >p
+          padding: 0
+          margin: 0
+          color: rgba(255,255,255,.95)
+
+          transition: all .3s ease-in-out
+
+          &.left
+            margin-left: 5px
+
+          &.right
+            margin-right: 5px
+
         >img
-          height: 18px
-          width: 18px
+          height: 17px
+          width: 17px
+
+          &.left
+            transform: rotate(90deg)
+
+          &.right
+            transform: rotate(-90deg)
+
+        &:hover > p.left
+          margin-left: 8px
+
+        &:hover > p.right
+          margin-right: 8px
 
         &.left
-          left: 30px
-          transform: rotate(90deg)
-          box-shadow: 6px -6px 20px $medium
+          left: 0px
 
         &.right
-          right: 30px
-          transform: rotate(-90deg)
-          box-shadow: -6px 6px 20px $medium
+          right: 0px
 
         &.hide
           opacity: 0
@@ -845,6 +931,10 @@ body
 
               line-height: 1.85em
 
+              &.small
+                font-size: 1em
+                margin-top: 10px
+
             >.more
               color: $primary
               border-bottom: 1px solid $primary
@@ -895,6 +985,64 @@ body
                 background: url('../images/confidence-small.jpg')
                   size: cover
                   position: center
+
+              &.laboratory-image
+                width: 100%
+                height: 400px
+
+                background: url('../images/secondary experiment-very-small.jpg')
+                  size: cover
+                  position: center
+
+              &.combination-image
+                width: 100%
+                height: 400px
+
+                background: url('../images/ict-secondary-small.jpg')
+                  size: cover
+                  position: center
+
+              &.trip-image
+                width: 100%
+                height: 400px
+
+                background: $light
+
+            .way-wrapper
+              display: flex
+              align-items: center
+              justify-content: center
+
+              border-top: 1px solid $light
+              border-bottom: 1px solid $light
+
+              >.way
+                border-left: 1px solid $light
+                padding: 20px
+
+                >h6
+                  font-size: 1.2em
+                  margin: 0px
+
+                  >span
+                    position: relative
+
+                    &::after
+                      position: absolute
+                      left: 0px
+                      bottom: -2px
+
+                      height: 2px
+                      width: 100%
+                      background: $medium
+
+                      content: ' '
+
+                >p
+                  margin-bottom: 0
+
+                &:nth-child(3)
+                  border-right: 1px solid $light
 
             .test-wrapper
               width: 600px

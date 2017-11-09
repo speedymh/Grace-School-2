@@ -9,6 +9,8 @@ body
         border-bottom: 1px solid $light
 
   .index-header
+    position: relative
+
     height: 100vh
     // height: 76vh
     width: 100%
@@ -54,9 +56,13 @@ body
       >h3
         font-size: 1.8em
         text-align: center
+        padding: 0px 20px
         color: transparentize(white, .15)
         letter-spacing: .5px
         text-shadow: 5px 5px 5px rgba(0,0,0,.3)
+
+        .break
+          display: block
 
     > .chevron-down
       position: absolute
@@ -86,7 +92,7 @@ body
         justify-content: flex-start
 
         .school-wrapper
-          width: 258px
+          width: 90%
           overflow: hidden
 
           display: flex
