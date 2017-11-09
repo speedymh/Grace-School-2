@@ -1773,26 +1773,36 @@ body .secondary-header {
         -ms-flex-order: 1;
         order: 1;
         background: #e1e1e1; }
+      .campus > .wrapper .feature .feature-image.hall {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        background: url("../images/hall.JPG");
+          background-size: cover;
+          background-position: center top; }
+      .campus > .wrapper .feature .feature-image.sport {
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        background: url("../images/secondary sports.JPG");
+          background-size: cover;
+          background-position: center; }
       .campus > .wrapper .feature .feature-image.music {
         -webkit-box-ordinal-group: 3;
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2;
-        background: #e1e1e1; }
+        background: url("../images/secondary music 2.JPG");
+          background-size: cover;
+          background-position: center top; }
       .campus > .wrapper .feature .feature-image.nature {
         -webkit-box-ordinal-group: 1;
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
-        background: url("../images/nature-very-small.JPG");
-          background-size: cover;
-          background-position: center; }
-      .campus > .wrapper .feature .feature-image.sport {
-        -webkit-box-ordinal-group: 3;
-        -webkit-order: 2;
-        -ms-flex-order: 2;
-        order: 2;
-        background: url("../images/football-very-small.JPG");
+        background: url("../images/secondary nature-very-small.JPG");
           background-size: cover;
           background-position: center; }
     .campus > .wrapper .feature .feature-content {
@@ -1846,12 +1856,17 @@ body .secondary-header {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 30px 0px; }
+  width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 3px;
+  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2); }
   .motto.wrapper.small.team.contact .hello-wrapper .secretary {
     width: 35%;
     height: 300px;
-    margin-right: 60px;
-    background: url("../images/entrance-primary-edited-very-small.jpg");
+    margin-right: 30px;
+    background: url("../images/grace secretary-very-small.jpg");
       background-size: cover;
       background-position: center; }
   .motto.wrapper.small.team.contact .hello-wrapper .contact-data {
@@ -1876,7 +1891,7 @@ body .secondary-header {
     .motto.wrapper.small.team.contact .hello-wrapper .contact-data > h5 {
       text-transform: uppercase;
       color: #acacac;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       letter-spacing: .4px; }
     .motto.wrapper.small.team.contact .hello-wrapper .contact-data > h4 {
       margin-top: 0px;
@@ -1916,7 +1931,7 @@ body .secondary-header {
           margin-right: 15px;
           font-weight: 600; }
     .motto.wrapper.small.team.contact .hello-wrapper .contact-data > .pop-up {
-      margin-top: 60px;
+      margin-top: 50px;
       margin-left: 0px; }
 
 .location {
