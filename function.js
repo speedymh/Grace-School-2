@@ -40,6 +40,16 @@ $(document).ready(function(){
     $('.primary>.wrapper').removeClass('open');
   });
 
+// Mobile-Menu
+
+  $('.hamburger-container.open').on('click', function() {
+    console.log('click');
+    $('.mobile-menu').removeClass('hide');
+  });
+  $('.hamburger-container.close').on('click', function() {
+    $('.mobile-menu').addClass('hide');
+  });
+
 // SLIDER
 
 // Right

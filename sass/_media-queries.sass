@@ -45,15 +45,32 @@
       >.wrapper
         flex-direction: column
         margin-left: 30px
+        position: relative
 
         .logo-footer
           margin-bottom: 10px
 
-        .footer-link-wrapper
-          margin-bottom: 10px
-
         >ul
           margin-bottom: 10px
+
+          &:nth-child(7)
+            margin-bottom: 0px
+
+          &.meta-data
+            text-align: right
+            position: absolute
+            bottom: 20px
+            right: 50px
+
+          >li
+            &.grace-schools-footer
+              color: red
+              display: none
+            &:nth-child(1)
+              margin-bottom: 0px
+
+              &:after
+                display: none
 
 // INDEX.html
 

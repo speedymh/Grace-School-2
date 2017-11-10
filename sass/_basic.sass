@@ -379,6 +379,7 @@ a
         top: 0px
 
 body
+  margin-right: 10px
 
   .primary
     position: absolute
@@ -497,27 +498,6 @@ body
             &:hover
               background: rgb(90, 184, 233)
 
-      .hamburger-container
-        display: none
-        align-items: center
-        justify-content: center
-        flex-direction: column
-
-
-        width: 40px
-        height: 40px
-        z-index: 1000
-
-        >span
-          height: 4px
-          width: 40px
-          background: black
-          margin-bottom: 8px
-          border-radius: 2px
-
-          &:nth-child(3)
-            margin-bottom: 0px
-
   .secondary
     position: absolute
     top: 0
@@ -573,6 +553,57 @@ body
       &.clicked
         top: 73px
         z-index: 4
+
+  .mobile-menu
+    position: fixed
+    top: 0px
+    left: 0px
+
+    width: 100vw
+    height: 100vh
+
+    background: $primary
+
+    z-index: 1000
+
+    margin: 0px
+    padding: 0px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    text-align: center
+    font-size: calc(2.5vw + 2.5vh)
+
+    overflow-y: scroll
+
+    transform: scale(1)
+    transition: all .3s ease-in-out
+
+    >.mobile-header
+      display: flex
+      width: calc(100% - 80px)
+      justify-content: space-between
+      align-items: center
+      padding: 15px 40px
+      position: fixed
+      top: 0px
+      left: 0px
+
+    >ul
+      margin-top: 80px
+      list-style: none
+      padding-right: 50px
+
+      >li
+        margin-bottom: 15px
+
+        >a
+          color: white
+
+    &.hide
+      transform: scale(0)
 
   .headline-centered
     background: #111111
@@ -947,8 +978,18 @@ body
 
               background: $light
 
+              &.nursery-subjects-image
+                background: url('../images/nursery-two-small.jpg')
+                  size: cover
+                  position: center
+
               &.sleep-image
                 background: url('../images/sleep-edited-small.jpg')
+                  size: cover
+                  position: center
+
+              &.tv-image
+                background: url('../images/new-media-small.jpg')
                   size: cover
                   position: center
 
@@ -1006,7 +1047,9 @@ body
                 width: 100%
                 height: 400px
 
-                background: $light
+                background: url('../images/zebra-small.jpg')
+                  size: cover
+                  position: center
 
             .way-wrapper
               display: flex
@@ -1237,3 +1280,46 @@ body
   .slider-footer
     text-align: center
     padding: 90px 0px
+
+.hamburger-container
+  display: none
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  cursor: pointer
+
+  width: 40px
+  height: 40px
+  z-index: 1000
+
+  >span
+    height: 4px
+    width: 40px
+    background: black
+    margin-bottom: 8px
+    border-radius: 2px
+
+    &:nth-child(3)
+      margin-bottom: 0px
+
+  &.close
+    display: flex
+    position: relative
+
+    >span
+      position: absolute
+      background: white
+      margin-bottom: 0px
+      top: 19px
+
+      &:nth-child(1)
+        transform: rotate(45deg)
+        top
+
+      &:nth-child(2)
+        display: none
+
+      &:nth-child(3)
+        transform: rotate(-45deg)
+        top: 19px
