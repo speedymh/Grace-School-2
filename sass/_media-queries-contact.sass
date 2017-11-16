@@ -1,0 +1,71 @@
+// CONTACT.html
+
+// .hello-wrapper
+
+@media (max-width: 700px)
+  body
+    .motto.wrapper.small.team.contact
+      padding-left: 0px
+      padding-right: 0px
+      .hello-wrapper
+        width: 100%
+        box-shadow: none
+        border-top: 1px solid $light
+        border-bottom: 1px solid $light
+
+@media (max-width: 480px)
+  body
+    .motto.wrapper.small.team.contact
+      .hello-wrapper
+        justify-content: flex-start
+        .secretary
+          width: 30px
+          margin-right: 40px
+          background: $primary
+        .contact-data
+          text-align: left
+          .pop-up.contact-numbers
+            margin-top: 20px
+
+@media (max-width: 360px)
+  body
+    .motto.wrapper.small.team.contact
+      .hello-wrapper
+        .contact-data
+          .email
+            align-items: flex-start
+            p
+              >.block
+                display: block
+
+// .location / googleMaps
+
+@media (max-width: 575px)
+  body
+    .location
+      flex-direction: column
+      #cd-google-map
+        width: 100vw
+        order: 2
+        #google-container
+          width: 100vw
+      #cd-google-map-two
+        width: 100vw
+        order: 2
+        #google-container-two
+          width: 100vw
+      .information-wrapper
+        width: 100vw
+        order: 0
+        margin-bottom: 40px
+
+// .get-in-touch
+
+@media (max-width: 420px)
+  body
+    .get-in-touch.contact
+      >h3
+        font-size: calc(2.5vw + 2.5vh)
+      >p
+        font-size: calc(1.8vw + 1.8vh)
+        margin-top: calc(1.1vw + 1.1vh)

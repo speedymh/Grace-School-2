@@ -1,0 +1,3 @@
+@media (max-width: 500px) {
+  body .header-title.wrapper > h2 {
+    font-size: 2px; } }
